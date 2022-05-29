@@ -2,8 +2,65 @@
 # Learn more at https://jupyterbook.org/customize/toc.html
 
 format: jb-book
-root: intro
-chapters:
-- file: markdown
-- file: notebooks
-- file: markdown-notebooks
+root: data-science-blog/intro
+parts:
+- caption: Natural Language Processing 
+  maxdepth: 3
+  chapters:
+  - file: data-science-blog/nlp/keyphrase_extraction
+  # sections:
+  # - file: path/to/part1/chapter2/section1
+# - caption: SQL
+#   numbered: true
+#   chapters:
+#   - file: data-science-blog/sql/
+#   sections:
+#   - file: path/to/part1/chapter2/section1
+# - caption: Python
+#   numbered: true
+#   chapters:
+#   - file: data-science-blog/python/
+#   sections:
+#   - file: path/to/part1/chapter2/section1
+
+# - caption: Computer Vision
+#   numbered: true
+#   chapters:
+#   - file: data-science-blog/cv/
+#   sections:
+#   - file: path/to/part1/chapter2/section1
+# - caption: Networks & Graphs
+#   numbered: true
+#   chapters:
+#   - file: data-science-blog/network/
+#   sections:
+#   - file: path/to/part1/chapter2/section1
+# - caption: MLOps
+#   numbered: true
+#   chapters:
+#   - file: data-science-blog/mlops/
+#   sections:
+#   - file: path/to/part1/chapter2/section1
+# - caption: Neural Search
+#   numbered: true
+#   chapters:
+#   - file: data-science-blog/neural_search/
+#   sections:
+#   - file: path/to/part1/chapter2/section1
+# - caption: Cloud
+#   numbered: true
+#   chapters:
+#   - file: data-science-blog/cloud/
+#   sections:
+#   - file: path/to/part1/chapter2/section1
+# - caption: Visualisation
+#   numbered: true
+#   chapters:
+#   - file: data-science-blog/visualisation/
+#   sections:
+#   - file: path/to/part1/chapter2/section1
+- caption: Data Science Career
+  chapters:
+  - file: data-science-blog/career/career_advice
+#   sections:
+#   - file: path/to/part1/chapter2/section1

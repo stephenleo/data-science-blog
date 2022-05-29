@@ -3,6 +3,7 @@
 
 title: Data Science Blog
 author: Marie Stephen Leo
+copyright: ""
 logo: logo.png
 
 # Force re-execution of notebooks on each build.
@@ -21,12 +22,16 @@ bibtex_bibfiles:
 
 # Information about where the book exists on the web
 repository:
-  url: https://github.com/executablebooks/jupyter-book  # Online location of your book
-  path_to_book: docs  # Optional path to your book, relative to the repository root
+  url: https://github.com/stephenleo/data-science-blog  # Online location of your book
+  path_to_book: data-science-blog  # Optional path to your book, relative to the repository root
   branch: master  # Which branch of the repository should be used when creating links (optional)
 
 # Add GitHub buttons to your book
 # See https://jupyterbook.org/customize/config.html#add-a-link-to-your-repository
 html:
-  use_issues_button: true
+  favicon: logo.png
   use_repository_button: true
+# use_issues_button: true
+
+launch_buttons:
+  colab_url: "https://colab.research.google.com"
