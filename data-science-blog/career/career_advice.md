@@ -1,4 +1,4 @@
-# 💼 Career Advice
+# 👔 Career Advice
 
 ## 🧑‍💻 Coding manager
 
