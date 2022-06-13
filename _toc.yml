@@ -11,6 +11,9 @@ parts:
 - caption: Time Series / Stocks
   chapters:
   - file: data-science-blog/time_series/stock_technical_analysis
+- caption: Good Coding Practices
+  chapters:
+  - file: data-science-blog/good_coding/refactoring
   # sections:
   # - file: path/to/part1/chapter2/section1
 # - caption: SQL
