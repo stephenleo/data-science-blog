@@ -4,6 +4,9 @@
 format: jb-book
 root: data-science-blog/intro
 parts:
+- caption: Machine Learning 
+  chapters:
+  - file: data-science-blog/ml/clustering
 - caption: Natural Language Processing 
   chapters:
   - file: data-science-blog/nlp/weak_supervision

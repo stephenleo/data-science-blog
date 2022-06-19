@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>👔 Career Advice &#8212; Data Science Blog</title>
+    <title>🍇 Clustering &#8212; Data Science Blog</title>
     
   <link href="../../_static/css/theme.css" rel="stylesheet">
   <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -55,7 +55,8 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="../../_static/logo.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="prev" title="🔩 Refactoring" href="../good_coding/refactoring.html" />
+    <link rel="next" title="🗂️ Weak Supervision" href="../nlp/weak_supervision.html" />
+    <link rel="prev" title="💡 Welcome to the Data Science Blog" href="../intro.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -104,9 +105,9 @@ const thebe_selector_output = ".output, .cell_output"
   Machine Learning
  </span>
 </p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../ml/clustering.html">
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
    🍇 Clustering
   </a>
  </li>
@@ -157,9 +158,9 @@ const thebe_selector_output = ".output, .cell_output"
   Data Science Career
  </span>
 </p>
-<ul class="current nav bd-sidenav">
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../career/career_advice.html">
    👔 Career Advice
   </a>
  </li>
@@ -204,9 +205,9 @@ const thebe_selector_output = ".output, .cell_output"
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../../_sources/data-science-blog/career/career_advice.md"><button type="button"
+        <a class="dropdown-buttons" href="../../_sources/data-science-blog/ml/clustering.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.md</button></a>
+                data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
                 onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
@@ -237,6 +238,28 @@ const thebe_selector_output = ".output, .cell_output"
 
             <!-- Launch buttons -->
 
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/stephenleo/data-science-blog/main?urlpath=tree/data-science-blog/data-science-blog/ml/clustering.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/stephenleo/data-science-blog/blob/main/data-science-blog/data-science-blog/ml/clustering.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="../../_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        
+    </div>
+</div>
+
         </div>
 
         <!-- Table of contents -->
@@ -248,30 +271,8 @@ const thebe_selector_output = ".output, .cell_output"
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#coding-manager">
-   🧑‍💻 Coding manager
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#a-typical-week-in-the-life-of-a-data-scientist">
-   📅 A Typical Week in the life of a Data Scientist
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#work">
-     Work:
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#meetings">
-     Meetings:
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#data-curation">
-   🪥 Data Curation
+  <a class="reference internal nav-link" href="#kmodes-clustering-of-categorical-data">
+   🍢 KModes: Clustering of Categorical Data
   </a>
  </li>
 </ul>
@@ -284,7 +285,7 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>👔 Career Advice</h1>
+                <h1>🍇 Clustering</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -295,30 +296,8 @@ const thebe_selector_output = ".output, .cell_output"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#coding-manager">
-   🧑‍💻 Coding manager
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#a-typical-week-in-the-life-of-a-data-scientist">
-   📅 A Typical Week in the life of a Data Scientist
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#work">
-     Work:
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#meetings">
-     Meetings:
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#data-curation">
-   🪥 Data Curation
+  <a class="reference internal nav-link" href="#kmodes-clustering-of-categorical-data">
+   🍢 KModes: Clustering of Categorical Data
   </a>
  </li>
 </ul>
@@ -330,53 +309,53 @@ const thebe_selector_output = ".output, .cell_output"
             
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="career-advice">
-<h1>👔 Career Advice<a class="headerlink" href="#career-advice" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="coding-manager">
-<h2>🧑‍💻 Coding manager<a class="headerlink" href="#coding-manager" title="Permalink to this headline">¶</a></h2>
-<p>I still code ~30% of my time despite managing a team!</p>
-<p>A while back, <a class="reference external" href="https://www.linkedin.com/in/ACoAABYyb4EBQTQdHJn1ueKgzEaD6P3ZYm7j_PQ">Shilpa</a> and I gave a talk to some Data Science students at General Assembly. One of the pieces of advice we gave students about what to expect from a career in Data Science is this:</p>
+  <div class="tex2jax_ignore mathjax_ignore section" id="clustering">
+<h1>🍇 Clustering<a class="headerlink" href="#clustering" title="Permalink to this headline">¶</a></h1>
+<p>Unsupervised grouping of related items</p>
+<div class="section" id="kmodes-clustering-of-categorical-data">
+<h2>🍢 KModes: Clustering of Categorical Data<a class="headerlink" href="#kmodes-clustering-of-categorical-data" title="Permalink to this headline">¶</a></h2>
+<p>KModes: Clustering of Categorical Data WITHOUT One-Hot encoding!</p>
 <ul class="simple">
-<li><p>The single most significant thing I would like aspiring Data Scientists to come to terms with is that technology is evolving at a breakneck pace! Embarking on this data science or analytics career is a journey of continuous learning and not a destination.</p></li>
-<li><p>Taking my career as an example, I still code ~30% of my time despite managing a team at Edelman. I also learn new algorithms and techniques in my own free time and blog about them. I love learning new things and the fact that there is so much knowledge and technology out there to learn makes me both excited and humble.</p></li>
-<li><p>I hope that the students also enjoy learning new things and continue to keep learning the latest technology throughout their careers.</p></li>
+<li><p>KMeans clustering using Euclidean distance to find clusters so you need to one-hot encode all categorical data</p></li>
+<li><p>In KModes clustering, you can directly cluster categorical data without one-hot encoding!</p></li>
+<li><p>KModes uses the number of dissimilar values between two categorical vectors as a distance metric to assign each data point to its nearest cluster at each clustering step.</p></li>
+<li><p>Mode is the most observed value for each column in the cluster</p></li>
+<li><p>Implement in one line of code!</p></li>
+<li><p>It also supports the K-Prototypes algorithm for combining k-modes and k-means on mixed categorical + numerical data.</p></li>
 </ul>
-<p>I am sharing this here for the wider community looking to break into this field. Having the right expectations will help prevent remorse when you eventually break into the field. All the best!</p>
-<p>#datascience #dataanalytics #technology #careeradvice</p>
-</div>
-<div class="section" id="a-typical-week-in-the-life-of-a-data-scientist">
-<h2>📅 A Typical Week in the life of a Data Scientist<a class="headerlink" href="#a-typical-week-in-the-life-of-a-data-scientist" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="work">
-<h3>Work:<a class="headerlink" href="#work" title="Permalink to this headline">¶</a></h3>
-<ol class="simple">
-<li><p>Review your JIRA tickets to decide what to work on this week. Curse at the awful JIRA UI.</p></li>
-<li><p>Read research papers on <a class="reference external" href="https://www.semanticscholar.org/">Semantic Scholar</a> or <a class="reference external" href="https://paperswithcode.com/">Papers with Code</a>. Feel smart when you realize you now read greek characters as fast as your native language.</p></li>
-<li><p>Reading documentation of various frameworks. Swearing at how lousy their documentation is.</p></li>
-<li><p>Coding. Realizing data cleanup will take about 80% of the project’s timeline. Complain about how messy the data is.</p></li>
-<li><p>Debugging. Frantically searching <a class="reference external" href="https://stackoverflow.com/">Stackoverflow</a> and hoping somebody else has resolved the same issue.</p></li>
-<li><p>Run experiments. Complain about how slow training is even on the latest NVIDIA GPU.</p></li>
-<li><p>Prepare fancy PowerPoints. Spend another 10% of the project’s timeline preparing PowerPoint slides so that the non-ML business teams can understand what you’re doing.</p></li>
-<li><p>Refactor code and submit a pull request hoping over the hope that all tests pass and no one thinks your code is dumb.</p></li>
-</ol>
-</div>
-<div class="section" id="meetings">
-<h3>Meetings:<a class="headerlink" href="#meetings" title="Permalink to this headline">¶</a></h3>
-<ol class="simple">
-<li><p>1:1s with boss/reports</p></li>
-<li><p>Daily/Weekly stand up meetings</p></li>
-<li><p>Project update meetings with product teams</p></li>
-<li><p>Code review meetings</p></li>
-<li><p>Client meetings</p></li>
-<li><p>Random meetings from some random person in the business asking for some random data extraction. They always assume it’s a simple task, while in reality, you have to join 20 different tables with nasty nested queries.</p></li>
-</ol>
-<p>#datascience #dataanalytics #career</p>
+<p><code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">kmodes</span></code></p>
+<p>🌟 Github: <a class="reference external" href="https://github.com/nicodv/kmodes">https://github.com/nicodv/kmodes</a></p>
+<a class="bg-primary mb-1 reference internal image-reference" href="../../_images/Repos-kmodes.png"><img alt="kmodes" class="bg-primary mb-1 align-center" src="../../_images/Repos-kmodes.png" style="width: 100%;" /></a>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">kmodes.kmodes</span> <span class="kn">import</span> <span class="n">KModes</span>
+<span class="kn">from</span> <span class="nn">kmodes.kprototypes</span> <span class="kn">import</span> <span class="n">KPrototypes</span>
+
+<span class="c1"># random categorical data</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
+
+<span class="c1"># KModes clustering - Categorical columns only</span>
+<span class="n">km</span> <span class="o">=</span> <span class="n">KModes</span><span class="p">(</span><span class="n">n_clusters</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">n_jobs</span><span class="o">=-</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">kmodes_cluster_ids</span> <span class="o">=</span> <span class="n">km</span><span class="o">.</span><span class="n">fit_predict</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+
+<span class="c1"># KPrototypes clustering - Categorical + Continuous columns!</span>
+<span class="n">kproto</span> <span class="o">=</span> <span class="n">KPrototypes</span><span class="p">(</span><span class="n">n_clusters</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">n_jobs</span><span class="o">=-</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">kproto_cluster_ids</span> <span class="o">=</span> <span class="n">kproto</span><span class="o">.</span><span class="n">fit_predict</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">categorical</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">])</span>
+
+<span class="c1"># Print the cluster ids for first 5 data points</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">kmodes_cluster_ids</span><span class="p">[:</span><span class="mi">5</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">kproto_cluster_ids</span><span class="p">[:</span><span class="mi">5</span><span class="p">])</span>
+</pre></div>
 </div>
 </div>
-<div class="section" id="data-curation">
-<h2>🪥 Data Curation<a class="headerlink" href="#data-curation" title="Permalink to this headline">¶</a></h2>
-<p>Data Scientists spend 80% (or more!) of their time collecting and cleaning up data in the real world. Preparing a clean, representative dataset is often more important than what algorithm you finally use to solve your problem.</p>
-<p>Many people who join the industry get disappointed when they cannot work on the latest algorithms, but I’d like aspiring Data Scientists to accept that this is normal. A lot of value is unlocked not in using fancy algorithms but in structuring the data well enough to be used.</p>
-<p>So do not get disappointed if you’re spending a lot of your time in data cleaning. On the contrary, enjoy the process of wrangling data as every problem is a unique and challenging puzzle to be solved.</p>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[0 0 0 1 1]
+[2 0 1 1 2]
+</pre></div>
+</div>
+</div>
+</div>
 </div>
 </div>
 
@@ -393,7 +372,7 @@ const thebe_selector_output = ".output, .cell_output"
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./data-science-blog/career"
+            path: "./data-science-blog/ml"
         },
         predefinedOutput: true
     }
@@ -405,12 +384,19 @@ const thebe_selector_output = ".output, .cell_output"
             
                 <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="../good_coding/refactoring.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="../intro.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">🔩 Refactoring</p>
+            <p class="prev-next-title">💡 Welcome to the Data Science Blog</p>
         </div>
+    </a>
+    <a class='right-next' id="next-link" href="../nlp/weak_supervision.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">🗂️ Weak Supervision</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
     </a>
 </div>
             
