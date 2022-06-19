@@ -31,7 +31,7 @@
 # 
 # 📖 Docs: [https://dirty-cat.github.io/stable/index.html](https://dirty-cat.github.io/stable/index.html)
 # 
-# 📒 Sample notebook:
+# 📒 Sample notebook: https://stephenleo.github.io/data-science-blog/data-science-blog/ml/feature_engineering.html#dirty-cat
 # 
 # ```{image} images/feature_engineering/Repos-dirty_cat.png
 # :alt: kmodes
