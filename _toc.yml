@@ -6,6 +6,7 @@ root: data-science-blog/intro
 parts:
 - caption: Machine Learning 
   chapters:
+  - file: data-science-blog/ml/feature_engineering
   - file: data-science-blog/ml/clustering
 - caption: Natural Language Processing 
   chapters:
