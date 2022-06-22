@@ -1,5 +1,7 @@
 jupyter-book
 matplotlib
+pandas
 numpy
 kmodes
 dirty_cat
+datasets
