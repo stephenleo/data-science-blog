@@ -57,12 +57,9 @@ parts:
 #   - file: data-science-blog/neural_search/
 #   sections:
 #   - file: path/to/part1/chapter2/section1
-# - caption: Cloud
-#   numbered: true
-#   chapters:
-#   - file: data-science-blog/cloud/
-#   sections:
-#   - file: path/to/part1/chapter2/section1
+- caption: Cloud
+  chapters:
+  - file: data-science-blog/cloud/file_storage
 # - caption: Visualisation
 #   numbered: true
 #   chapters:
