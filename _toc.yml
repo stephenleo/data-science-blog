@@ -4,6 +4,9 @@
 format: jb-book
 root: data-science-blog/intro
 parts:
+- caption: Python
+  chapters:
+  - file: data-science-blog/python/pandas
 - caption: Machine Learning 
   chapters:
   - file: data-science-blog/ml/datasets
@@ -13,6 +16,7 @@ parts:
   chapters:
   - file: data-science-blog/nlp/weak_supervision
   - file: data-science-blog/nlp/keyphrase_extraction
+  - file: data-science-blog/nlp/named_entity_resolution
 - caption: Time Series / Stocks
   chapters:
   - file: data-science-blog/time_series/stock_technical_analysis

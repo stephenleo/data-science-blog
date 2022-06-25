@@ -7,3 +7,7 @@ dirty_cat
 datasets
 boto3
 smart-open
+spacy
+spacyopentapioca
+pywikibot
+wikitextparser
