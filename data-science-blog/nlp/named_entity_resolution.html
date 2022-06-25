@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>🍇 Clustering &#8212; Data Science Blog</title>
+    <title>🔀 Named Entity Resolution &#8212; Data Science Blog</title>
     
   <link href="../../_static/css/theme.css" rel="stylesheet">
   <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -57,8 +57,8 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="../../_static/logo.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="🗂️ Weak Supervision" href="../nlp/weak_supervision.html" />
-    <link rel="prev" title="🛠️ Feature Engineering" href="feature_engineering.html" />
+    <link rel="next" title="💹 Stock Technical Analysis" href="../time_series/stock_technical_analysis.html" />
+    <link rel="prev" title="🔑 Keyphrase Extraction" href="keyphrase_extraction.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -119,19 +119,19 @@ const thebe_selector_output = ".output, .cell_output"
   Machine Learning
  </span>
 </p>
-<ul class="current nav bd-sidenav">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="datasets.html">
+  <a class="reference internal" href="../ml/datasets.html">
    🗄️ Datasets
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="feature_engineering.html">
+  <a class="reference internal" href="../ml/feature_engineering.html">
    🛠️ Feature Engineering
   </a>
  </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ml/clustering.html">
    🍇 Clustering
   </a>
  </li>
@@ -141,19 +141,19 @@ const thebe_selector_output = ".output, .cell_output"
   Natural Language Processing
  </span>
 </p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../nlp/weak_supervision.html">
+  <a class="reference internal" href="weak_supervision.html">
    🗂️ Weak Supervision
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../nlp/keyphrase_extraction.html">
+  <a class="reference internal" href="keyphrase_extraction.html">
    🔑 Keyphrase Extraction
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../nlp/named_entity_resolution.html">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
    🔀 Named Entity Resolution
   </a>
  </li>
@@ -246,7 +246,7 @@ const thebe_selector_output = ".output, .cell_output"
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../../_sources/data-science-blog/ml/clustering.ipynb"><button type="button"
+        <a class="dropdown-buttons" href="../../_sources/data-science-blog/nlp/named_entity_resolution.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
@@ -284,7 +284,7 @@ const thebe_selector_output = ".output, .cell_output"
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/stephenleo/data-science-blog/main?urlpath=tree/data-science-blog/data-science-blog/ml/clustering.ipynb"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/stephenleo/data-science-blog/main?urlpath=tree/data-science-blog/data-science-blog/nlp/named_entity_resolution.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="../../_static/images/logo_binder.svg"
@@ -292,7 +292,7 @@ const thebe_selector_output = ".output, .cell_output"
         
         
         
-        <a class="colab-button" href="https://colab.research.google.com/github/stephenleo/data-science-blog/blob/main/data-science-blog/data-science-blog/ml/clustering.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+        <a class="colab-button" href="https://colab.research.google.com/github/stephenleo/data-science-blog/blob/main/data-science-blog/data-science-blog/nlp/named_entity_resolution.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
                 title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
                     src="../../_static/images/logo_colab.png"
                     alt="Interact on Colab">Colab</button></a>
@@ -312,8 +312,8 @@ const thebe_selector_output = ".output, .cell_output"
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#kmodes-clustering-of-categorical-data">
-   🍢 KModes: Clustering of Categorical Data
+  <a class="reference internal nav-link" href="#named-entity-linking-spacy-opentapioca">
+   Named Entity Linking - 🥔 Spacy OpenTapioca
   </a>
  </li>
 </ul>
@@ -326,7 +326,7 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>🍇 Clustering</h1>
+                <h1>🔀 Named Entity Resolution</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -337,8 +337,8 @@ const thebe_selector_output = ".output, .cell_output"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#kmodes-clustering-of-categorical-data">
-   🍢 KModes: Clustering of Categorical Data
+  <a class="reference internal nav-link" href="#named-entity-linking-spacy-opentapioca">
+   Named Entity Linking - 🥔 Spacy OpenTapioca
   </a>
  </li>
 </ul>
@@ -350,49 +350,73 @@ const thebe_selector_output = ".output, .cell_output"
             
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="clustering">
-<h1>🍇 Clustering<a class="headerlink" href="#clustering" title="Permalink to this headline">¶</a></h1>
-<p>Unsupervised grouping of related items</p>
-<div class="section" id="kmodes-clustering-of-categorical-data">
-<h2>🍢 KModes: Clustering of Categorical Data<a class="headerlink" href="#kmodes-clustering-of-categorical-data" title="Permalink to this headline">¶</a></h2>
-<p>KModes: Clustering of Categorical Data WITHOUT One-Hot encoding!</p>
+  <div class="tex2jax_ignore mathjax_ignore section" id="named-entity-resolution">
+<h1>🔀 Named Entity Resolution<a class="headerlink" href="#named-entity-resolution" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="named-entity-linking-spacy-opentapioca">
+<h2>Named Entity Linking - 🥔 Spacy OpenTapioca<a class="headerlink" href="#named-entity-linking-spacy-opentapioca" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li><p>KMeans clustering using Euclidean distance to find clusters so you need to one-hot encode all categorical data</p></li>
-<li><p>In KModes clustering, you can directly cluster categorical data without one-hot encoding!</p></li>
-<li><p>KModes uses the number of dissimilar values between two categorical vectors as a distance metric to assign each data point to its nearest cluster at each clustering step.</p></li>
-<li><p>Mode is the most observed value for each column in the cluster</p></li>
-<li><p>Implement in one line of code!</p></li>
-<li><p>It also supports the K-Prototypes algorithm for combining k-modes and k-means on mixed categorical + numerical data.</p></li>
+<li><p>Named Entity Linking is the task of detecting mentions of entities from a knowledge base in free text</p></li>
+<li><p>OpenTapioca is a simple and fast Named Entity Linking system for Wikidata</p></li>
+<li><p>Wikidata is a free knowledge base that contains a variety of information about real world entities.</p></li>
+<li><p>For example, if you want to know who’s Linkedin’s parent company, wikidata is the knowledge base to programatically get this information.</p></li>
 </ul>
-<p><code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">kmodes</span></code></p>
-<p>🌟 Github: <a class="reference external" href="https://github.com/nicodv/kmodes">https://github.com/nicodv/kmodes</a></p>
-<a class="bg-primary mb-1 reference internal image-reference" href="../../_images/Repos-kmodes.png"><img alt="kmodes" class="bg-primary mb-1 align-center" src="../../_images/Repos-kmodes.png" style="width: 100%;" /></a>
+<p>🌟 Spacy OpenTapioca Github: <a class="reference external" href="https://github.com/UB-Mannheim/spacyopentapioca">https://github.com/UB-Mannheim/spacyopentapioca</a>
+🌟 Pywikibot Github: <a class="reference external" href="https://github.com/wikimedia/pywikibot">https://github.com/wikimedia/pywikibot</a></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">from</span> <span class="nn">kmodes.kmodes</span> <span class="kn">import</span> <span class="n">KModes</span>
-<span class="kn">from</span> <span class="nn">kmodes.kprototypes</span> <span class="kn">import</span> <span class="n">KPrototypes</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">spacy</span>
+<span class="kn">from</span> <span class="nn">pywikibot.data.sparql</span> <span class="kn">import</span> <span class="n">SparqlQuery</span>
 
-<span class="c1"># random categorical data</span>
-<span class="n">data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
+<span class="c1"># Add Spacy OpenTapioca Pipeline to identify the entities</span>
+<span class="n">nlp</span> <span class="o">=</span> <span class="n">spacy</span><span class="o">.</span><span class="n">blank</span><span class="p">(</span><span class="s2">&quot;en&quot;</span><span class="p">)</span>
+<span class="n">nlp</span><span class="o">.</span><span class="n">add_pipe</span><span class="p">(</span><span class="s2">&quot;opentapioca&quot;</span><span class="p">)</span>
 
-<span class="c1"># KModes clustering - Categorical columns only</span>
-<span class="n">km</span> <span class="o">=</span> <span class="n">KModes</span><span class="p">(</span><span class="n">n_clusters</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">n_jobs</span><span class="o">=-</span><span class="mi">1</span><span class="p">)</span>
-<span class="n">kmodes_cluster_ids</span> <span class="o">=</span> <span class="n">km</span><span class="o">.</span><span class="n">fit_predict</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+<span class="c1"># Wikidata Sparql to query properties of the entity</span>
+<span class="n">query</span> <span class="o">=</span> <span class="n">SparqlQuery</span><span class="p">()</span>
+<span class="n">property_to_query</span> <span class="o">=</span> <span class="s2">&quot;P749&quot;</span>  <span class="c1"># https://www.wikidata.org/wiki/Wikidata:List_of_properties</span>
+<span class="n">sparql_query</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">SELECT ?name ?nameLabel </span>
+<span class="s2">WHERE {{</span>
+<span class="s2">  wd:</span><span class="si">{wikidata_id}</span><span class="s2"> wdt:</span><span class="si">{property_to_query}</span><span class="s2"> ?name.</span>
+<span class="s2">  SERVICE wikibase:label {{ bd:serviceParam wikibase:language &quot;en&quot;. }}</span>
+<span class="s2">}}</span>
+<span class="s2">&quot;&quot;&quot;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Run the entity linking analysis</span>
+<span class="n">doc</span> <span class="o">=</span> <span class="n">nlp</span><span class="p">(</span><span class="s2">&quot;LinkedIn Premium is offered in four tiers&quot;</span><span class="p">)</span>
 
-<span class="c1"># KPrototypes clustering - Categorical + Continuous columns!</span>
-<span class="n">kproto</span> <span class="o">=</span> <span class="n">KPrototypes</span><span class="p">(</span><span class="n">n_clusters</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">n_jobs</span><span class="o">=-</span><span class="mi">1</span><span class="p">)</span>
-<span class="n">kproto_cluster_ids</span> <span class="o">=</span> <span class="n">kproto</span><span class="o">.</span><span class="n">fit_predict</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">categorical</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">])</span>
+<span class="k">for</span> <span class="n">span</span> <span class="ow">in</span> <span class="n">doc</span><span class="o">.</span><span class="n">ents</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Entity: </span><span class="si">{</span><span class="n">span</span><span class="o">.</span><span class="n">text</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 
-<span class="c1"># Print the cluster ids for first 5 data points</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">kmodes_cluster_ids</span><span class="p">[:</span><span class="mi">5</span><span class="p">])</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">kproto_cluster_ids</span><span class="p">[:</span><span class="mi">5</span><span class="p">])</span>
+    <span class="c1"># From OpenTapioca</span>
+    <span class="n">wikidata_id</span> <span class="o">=</span> <span class="n">span</span><span class="o">.</span><span class="n">kb_id_</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;    Wikidata ID: </span><span class="si">{</span><span class="n">wikidata_id</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;    Desc: </span><span class="si">{</span><span class="n">span</span><span class="o">.</span><span class="n">_</span><span class="o">.</span><span class="n">description</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+    <span class="c1"># From WikiData</span>
+    <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">query</span><span class="o">.</span><span class="n">select</span><span class="p">(</span>
+        <span class="n">sparql_query</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+            <span class="n">wikidata_id</span><span class="o">=</span><span class="n">wikidata_id</span><span class="p">,</span> <span class="n">property_to_query</span><span class="o">=</span><span class="n">property_to_query</span>
+        <span class="p">)</span>
+    <span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;    Parent Org: </span><span class="si">{</span><span class="n">item</span><span class="p">[</span><span class="s1">&#39;nameLabel&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">--------------------------------------------------</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[2 2 3 0 0]
-[2 3 2 0 0]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Entity: LinkedIn
+    Wikidata ID: Q213660
+    Desc: social networking website for people in professional occupations
+    Parent Org: Microsoft
+
+--------------------------------------------------
 </pre></div>
 </div>
 </div>
@@ -413,7 +437,7 @@ const thebe_selector_output = ".output, .cell_output"
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./data-science-blog/ml"
+            path: "./data-science-blog/nlp"
         },
         predefinedOutput: true
     }
@@ -425,17 +449,17 @@ const thebe_selector_output = ".output, .cell_output"
             
                 <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="feature_engineering.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="keyphrase_extraction.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">🛠️ Feature Engineering</p>
+            <p class="prev-next-title">🔑 Keyphrase Extraction</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="../nlp/weak_supervision.html" title="next page">
+    <a class='right-next' id="next-link" href="../time_series/stock_technical_analysis.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">🗂️ Weak Supervision</p>
+        <p class="prev-next-title">💹 Stock Technical Analysis</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
