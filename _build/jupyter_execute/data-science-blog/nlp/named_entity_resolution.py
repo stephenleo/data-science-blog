@@ -11,9 +11,10 @@
 # - For example, if you want to know who's Linkedin's parent company, wikidata is the knowledge base to programatically get this information.
 # 
 # 🌟 Spacy OpenTapioca Github: https://github.com/UB-Mannheim/spacyopentapioca
+# 
 # 🌟 Pywikibot Github: https://github.com/wikimedia/pywikibot
 
-# In[9]:
+# In[1]:
 
 
 import spacy
@@ -25,7 +26,9 @@ nlp.add_pipe("opentapioca")
 
 # Wikidata Sparql to query properties of the entity
 query = SparqlQuery()
+
 property_to_query = "P749"  # https://www.wikidata.org/wiki/Wikidata:List_of_properties
+
 sparql_query = """
 SELECT ?name ?nameLabel 
 WHERE {{
@@ -35,7 +38,7 @@ WHERE {{
 """
 
 
-# In[10]:
+# In[2]:
 
 
 # Run the entity linking analysis

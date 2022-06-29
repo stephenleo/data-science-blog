@@ -20,9 +20,17 @@ parts:
 - caption: Time Series / Stocks
   chapters:
   - file: data-science-blog/time_series/stock_technical_analysis
+- caption: Cloud
+  chapters:
+  - file: data-science-blog/cloud/apis
+  - file: data-science-blog/cloud/file_storage
+  - file: data-science-blog/cloud/sagemaker
 - caption: Good Coding Practices
   chapters:
   - file: data-science-blog/good_coding/refactoring
+- caption: Data Science Career
+  chapters:
+  - file: data-science-blog/career/career_advice
   # sections:
   # - file: path/to/part1/chapter2/section1
 # - caption: SQL
@@ -61,17 +69,9 @@ parts:
 #   - file: data-science-blog/neural_search/
 #   sections:
 #   - file: path/to/part1/chapter2/section1
-- caption: Cloud
-  chapters:
-  - file: data-science-blog/cloud/file_storage
 # - caption: Visualisation
 #   numbered: true
 #   chapters:
 #   - file: data-science-blog/visualisation/
-#   sections:
-#   - file: path/to/part1/chapter2/section1
-- caption: Data Science Career
-  chapters:
-  - file: data-science-blog/career/career_advice
 #   sections:
 #   - file: path/to/part1/chapter2/section1

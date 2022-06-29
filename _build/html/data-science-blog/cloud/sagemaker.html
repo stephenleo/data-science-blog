@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>🍇 Clustering &#8212; Data Science Blog</title>
+    <title>🧘 AWS Sagemaker &#8212; Data Science Blog</title>
     
   <link href="../../_static/css/theme.css" rel="stylesheet">
   <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -57,8 +57,8 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="../../_static/logo.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="🗂️ Weak Supervision" href="../nlp/weak_supervision.html" />
-    <link rel="prev" title="🛠️ Feature Engineering" href="feature_engineering.html" />
+    <link rel="next" title="🔩 Refactoring" href="../good_coding/refactoring.html" />
+    <link rel="prev" title="🗄️ File Storage (S3, GCS, etc)" href="file_storage.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -119,19 +119,19 @@ const thebe_selector_output = ".output, .cell_output"
   Machine Learning
  </span>
 </p>
-<ul class="current nav bd-sidenav">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="datasets.html">
+  <a class="reference internal" href="../ml/datasets.html">
    🗄️ Datasets
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="feature_engineering.html">
+  <a class="reference internal" href="../ml/feature_engineering.html">
    🛠️ Feature Engineering
   </a>
  </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ml/clustering.html">
    🍇 Clustering
   </a>
  </li>
@@ -175,19 +175,19 @@ const thebe_selector_output = ".output, .cell_output"
   Cloud
  </span>
 </p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../cloud/apis.html">
+  <a class="reference internal" href="apis.html">
    📟 Application Programming Interface (API)
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../cloud/file_storage.html">
+  <a class="reference internal" href="file_storage.html">
    🗄️ File Storage (S3, GCS, etc)
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../cloud/sagemaker.html">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
    🧘 AWS Sagemaker
   </a>
  </li>
@@ -256,7 +256,7 @@ const thebe_selector_output = ".output, .cell_output"
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../../_sources/data-science-blog/ml/clustering.ipynb"><button type="button"
+        <a class="dropdown-buttons" href="../../_sources/data-science-blog/cloud/sagemaker.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
@@ -294,7 +294,7 @@ const thebe_selector_output = ".output, .cell_output"
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/stephenleo/data-science-blog/main?urlpath=tree/data-science-blog/data-science-blog/ml/clustering.ipynb"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/stephenleo/data-science-blog/main?urlpath=tree/data-science-blog/data-science-blog/cloud/sagemaker.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="../../_static/images/logo_binder.svg"
@@ -302,7 +302,7 @@ const thebe_selector_output = ".output, .cell_output"
         
         
         
-        <a class="colab-button" href="https://colab.research.google.com/github/stephenleo/data-science-blog/blob/main/data-science-blog/data-science-blog/ml/clustering.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+        <a class="colab-button" href="https://colab.research.google.com/github/stephenleo/data-science-blog/blob/main/data-science-blog/data-science-blog/cloud/sagemaker.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
                 title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
                     src="../../_static/images/logo_colab.png"
                     alt="Interact on Colab">Colab</button></a>
@@ -322,8 +322,13 @@ const thebe_selector_output = ".output, .cell_output"
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#kmodes-clustering-of-categorical-data">
-   🍢 KModes: Clustering of Categorical Data
+  <a class="reference internal nav-link" href="#aws-sagemaker-serverless">
+   ☁️ AWS Sagemaker Serverless
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#aws-sagemaker-inference">
+   🚀 AWS Sagemaker Inference
   </a>
  </li>
 </ul>
@@ -336,7 +341,7 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>🍇 Clustering</h1>
+                <h1>🧘 AWS Sagemaker</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -347,8 +352,13 @@ const thebe_selector_output = ".output, .cell_output"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#kmodes-clustering-of-categorical-data">
-   🍢 KModes: Clustering of Categorical Data
+  <a class="reference internal nav-link" href="#aws-sagemaker-serverless">
+   ☁️ AWS Sagemaker Serverless
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#aws-sagemaker-inference">
+   🚀 AWS Sagemaker Inference
   </a>
  </li>
 </ul>
@@ -360,53 +370,47 @@ const thebe_selector_output = ".output, .cell_output"
             
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="clustering">
-<h1>🍇 Clustering<a class="headerlink" href="#clustering" title="Permalink to this headline">¶</a></h1>
-<p>Unsupervised grouping of related items</p>
-<div class="section" id="kmodes-clustering-of-categorical-data">
-<h2>🍢 KModes: Clustering of Categorical Data<a class="headerlink" href="#kmodes-clustering-of-categorical-data" title="Permalink to this headline">¶</a></h2>
-<p>KModes: Clustering of Categorical Data WITHOUT One-Hot encoding!</p>
+  <div class="tex2jax_ignore mathjax_ignore section" id="aws-sagemaker">
+<h1>🧘 AWS Sagemaker<a class="headerlink" href="#aws-sagemaker" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="aws-sagemaker-serverless">
+<h2>☁️ AWS Sagemaker Serverless<a class="headerlink" href="#aws-sagemaker-serverless" title="Permalink to this headline">¶</a></h2>
+<p>Major cost savings on ML endpoints with AWS Sagemaker!</p>
 <ul class="simple">
-<li><p>KMeans clustering using Euclidean distance to find clusters so you need to one-hot encode all categorical data</p></li>
-<li><p>In KModes clustering, you can directly cluster categorical data without one-hot encoding!</p></li>
-<li><p>KModes uses the number of dissimilar values between two categorical vectors as a distance metric to assign each data point to its nearest cluster at each clustering step.</p></li>
-<li><p>Mode is the most observed value for each column in the cluster</p></li>
-<li><p>Implement in one line of code!</p></li>
-<li><p>It also supports the K-Prototypes algorithm for combining k-modes and k-means on mixed categorical + numerical data.</p></li>
+<li><p>In the past when you deploy an ML model as a Real-Time Inference endpoint on Sagemaker, you’ve had to keep the deployment instance running 24*7</p></li>
+<li><p>This is a waste of money if your ML model receives sporadic traffic with some periods of 0 traffic as your instance is running idle</p></li>
 </ul>
-<p><code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">kmodes</span></code></p>
-<p>🌟 Github: <a class="reference external" href="https://github.com/nicodv/kmodes">https://github.com/nicodv/kmodes</a></p>
-<a class="bg-primary mb-1 reference internal image-reference" href="../../_images/Repos-kmodes.png"><img alt="kmodes" class="bg-primary mb-1 align-center" src="../../_images/Repos-kmodes.png" style="width: 100%;" /></a>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">from</span> <span class="nn">kmodes.kmodes</span> <span class="kn">import</span> <span class="n">KModes</span>
-<span class="kn">from</span> <span class="nn">kmodes.kprototypes</span> <span class="kn">import</span> <span class="n">KPrototypes</span>
-
-<span class="c1"># random categorical data</span>
-<span class="n">data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
-
-<span class="c1"># KModes clustering - Categorical columns only</span>
-<span class="n">km</span> <span class="o">=</span> <span class="n">KModes</span><span class="p">(</span><span class="n">n_clusters</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">n_jobs</span><span class="o">=-</span><span class="mi">1</span><span class="p">)</span>
-<span class="n">kmodes_cluster_ids</span> <span class="o">=</span> <span class="n">km</span><span class="o">.</span><span class="n">fit_predict</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
-
-<span class="c1"># KPrototypes clustering - Categorical + Continuous columns!</span>
-<span class="n">kproto</span> <span class="o">=</span> <span class="n">KPrototypes</span><span class="p">(</span><span class="n">n_clusters</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">n_jobs</span><span class="o">=-</span><span class="mi">1</span><span class="p">)</span>
-<span class="n">kproto_cluster_ids</span> <span class="o">=</span> <span class="n">kproto</span><span class="o">.</span><span class="n">fit_predict</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">categorical</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">])</span>
-
-<span class="c1"># Print the cluster ids for first 5 data points</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">kmodes_cluster_ids</span><span class="p">[:</span><span class="mi">5</span><span class="p">])</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">kproto_cluster_ids</span><span class="p">[:</span><span class="mi">5</span><span class="p">])</span>
-</pre></div>
+<p>Enter Sagemaker serverless!</p>
+<ul class="simple">
+<li><p>During times when there is no traffic, Serverless Inference scales your endpoint down to 0, helping you to minimize your costs!</p></li>
+<li><p>There will be some cold start when there is traffic after a long period of inactivity. In my experience with scikit-learn models, the cold start is &lt;2s!</p></li>
+<li><p>Implement with just one line of code change</p></li>
+</ul>
+<p>📖 Docs: <a class="reference external" href="https://docs.aws.amazon.com/sagemaker/latest/dg/serverless-endpoints.html">https://docs.aws.amazon.com/sagemaker/latest/dg/serverless-endpoints.html</a></p>
+<p>#datascience #dataanalytics #dataengineering #aws #gcp #azure #python</p>
+<a class="bg-primary mb-1 reference internal image-reference" href="../../_images/Repos-sagemaker_serverless.png"><img alt="sagemaker serverless" class="bg-primary mb-1 align-center" src="../../_images/Repos-sagemaker_serverless.png" style="width: 100%;" /></a>
 </div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[2 2 3 0 0]
-[2 0 3 1 1]
-</pre></div>
-</div>
-</div>
-</div>
+<div class="section" id="aws-sagemaker-inference">
+<h2>🚀 AWS Sagemaker Inference<a class="headerlink" href="#aws-sagemaker-inference" title="Permalink to this headline">¶</a></h2>
+<p>AWS Sagemaker is one of the easiest ways I’ve come across for deploying Machine Learning models as a Data Scientist.</p>
+<ul class="simple">
+<li><p>Create a simple <code class="docutils literal notranslate"><span class="pre">serve.py</span></code> file with just four functions</p></li>
+<li><p>model_fn: To load the model from a file</p></li>
+<li><p>input_fn: Convert input JSON data into a pandas dataframe. Do any other preprocessing BEFORE model predictions here</p></li>
+<li><p>predict_fn: Run the model predictions</p></li>
+<li><p>output_fn: Post-process the predictions and convert them to JSON</p></li>
+<li><p>As a pre-requisite, your trained model should be zipped as a tar.gz file on S3</p></li>
+</ul>
+<p>Use the same <code class="docutils literal notranslate"><span class="pre">http://serve.py</span></code> for all of the below deployment methods!</p>
+<ul class="simple">
+<li><p>Real-time inference</p></li>
+<li><p>Multi-model endpoint</p></li>
+<li><p>Serverless inference (the topic of yesterday’s post)</p></li>
+<li><p>Batch transform</p></li>
+</ul>
+<p>The entire process is massively simplified if you use the JSON lines format (a topic for another post).</p>
+<p>📖 Docs: <a class="reference external" href="https://sagemaker.readthedocs.io/en/stable/frameworks/sklearn/using_sklearn.html">https://sagemaker.readthedocs.io/en/stable/frameworks/sklearn/using_sklearn.html</a></p>
+<p>#mlops #datascience #dataanalytics #dataengineering #aws #sagemaker #gcp #azure #python</p>
+<a class="bg-primary mb-1 reference internal image-reference" href="../../_images/Repos-sagemaker_serve_py.png"><img alt="sagemaker serve.py" class="bg-primary mb-1 align-center" src="../../_images/Repos-sagemaker_serve_py.png" style="width: 100%;" /></a>
 </div>
 </div>
 
@@ -423,7 +427,7 @@ const thebe_selector_output = ".output, .cell_output"
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./data-science-blog/ml"
+            path: "./data-science-blog/cloud"
         },
         predefinedOutput: true
     }
@@ -435,17 +439,17 @@ const thebe_selector_output = ".output, .cell_output"
             
                 <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="feature_engineering.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="file_storage.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">🛠️ Feature Engineering</p>
+            <p class="prev-next-title">🗄️ File Storage (S3, GCS, etc)</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="../nlp/weak_supervision.html" title="next page">
+    <a class='right-next' id="next-link" href="../good_coding/refactoring.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">🗂️ Weak Supervision</p>
+        <p class="prev-next-title">🔩 Refactoring</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
