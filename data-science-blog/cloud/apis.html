@@ -375,7 +375,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li><p>Very readable where each key is the column name, and each value is the value of the row in that column. No ambiguity about which value belongs to which feature!</p></li>
 <li><p>Easy to parallelize (e.g., using Sagemaker Batch Transform) since we can send each line to a different machine for inference.</p></li>
 </ul>
-<p>While deploying ML models (e.g., in Sagemaker), you need to handle converting to and from the JSON object. So keeping your deployment consistent with JSON lines will make your life much easier and unambiguous.</p>
+<p>While deploying ML models (e.g., in Sagemaker), you need to handle converting to and from the JSON object. So keeping your deployment consistent with JSON lines format will make your life much easier and unambiguous.</p>
 <p>#mlops #datascience #dataanalytics #dataengineering #aws #sagemaker #gcp #azure #python</p>
 <a class="bg-primary mb-1 reference internal image-reference" href="../../_images/Tips-json_lines.png"><img alt="json lines" class="bg-primary mb-1 align-center" src="../../_images/Tips-json_lines.png" style="width: 100%;" /></a>
 <div class="cell docutils container">
@@ -386,12 +386,12 @@ const thebe_selector_output = ".output, .cell_output"
 <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s2">&quot;col_a&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mf">1.5</span><span class="p">,</span> <span class="mf">2.3</span><span class="p">],</span> <span class="s2">&quot;col_b&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mf">200.1</span><span class="p">,</span> <span class="mf">150.6</span><span class="p">],</span> <span class="s2">&quot;col_c&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">]})</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
 
-<span class="c1"># Pandas Dataframe to JSON lines</span>
-<span class="n">df_json_lines</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">to_json</span><span class="p">(</span><span class="n">orient</span><span class="o">=</span><span class="s2">&quot;records&quot;</span><span class="p">,</span> <span class="n">lines</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">df_json_lines</span><span class="p">)</span>
+<span class="c1"># Pandas Dataframe to JSON lines string</span>
+<span class="n">json_lines_str</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">to_json</span><span class="p">(</span><span class="n">orient</span><span class="o">=</span><span class="s2">&quot;records&quot;</span><span class="p">,</span> <span class="n">lines</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">json_lines_str</span><span class="p">)</span>
 
-<span class="c1"># JSON lines to Pandas Dataframe</span>
-<span class="n">df_reconstructed</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_json</span><span class="p">(</span><span class="n">df_json_lines</span><span class="p">,</span> <span class="n">lines</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="c1"># JSON lines string to Pandas Dataframe</span>
+<span class="n">df_reconstructed</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_json</span><span class="p">(</span><span class="n">json_lines_str</span><span class="p">,</span> <span class="n">lines</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">df_reconstructed</span><span class="p">)</span>
 </pre></div>
 </div>
