@@ -16,7 +16,7 @@
 # - Very readable where each key is the column name, and each value is the value of the row in that column. No ambiguity about which value belongs to which feature!
 # - Easy to parallelize (e.g., using Sagemaker Batch Transform) since we can send each line to a different machine for inference.
 # 
-# While deploying ML models (e.g., in Sagemaker), you need to handle converting to and from the JSON object. So keeping your deployment consistent with JSON lines will make your life much easier and unambiguous.
+# While deploying ML models (e.g., in Sagemaker), you need to handle converting to and from the JSON object. So keeping your deployment consistent with JSON lines format will make your life much easier and unambiguous.
 # 
 # #mlops #datascience #dataanalytics #dataengineering #aws #sagemaker #gcp #azure #python
 # 
@@ -36,12 +36,12 @@ import pandas as pd
 df = pd.DataFrame({"col_a": [1.5, 2.3], "col_b": [200.1, 150.6], "col_c": ["a", "b"]})
 print(df)
 
-# Pandas Dataframe to JSON lines
-df_json_lines = df.to_json(orient="records", lines=True)
-print(df_json_lines)
+# Pandas Dataframe to JSON lines string
+json_lines_str = df.to_json(orient="records", lines=True)
+print(json_lines_str)
 
-# JSON lines to Pandas Dataframe
-df_reconstructed = pd.read_json(df_json_lines, lines=True)
+# JSON lines string to Pandas Dataframe
+df_reconstructed = pd.read_json(json_lines_str, lines=True)
 print(df_reconstructed)
 
 
