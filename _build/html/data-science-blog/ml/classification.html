@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>🍇 Clustering &#8212; Data Science Blog</title>
+    <title>💠 Classification &#8212; Data Science Blog</title>
     
   <link href="../../_static/css/theme.css" rel="stylesheet">
   <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -52,12 +52,10 @@ const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.1/dist/embed-amd.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <link rel="shortcut icon" href="../../_static/logo.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="🗂️ Weak Supervision" href="../nlp/weak_supervision.html" />
+    <link rel="next" title="🍇 Clustering" href="clustering.html" />
     <link rel="prev" title="🛠️ Feature Engineering" href="feature_engineering.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -132,6 +130,11 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
+   💠 Classification
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="clustering.html">
    🍇 Clustering
   </a>
  </li>
@@ -256,7 +259,7 @@ const thebe_selector_output = ".output, .cell_output"
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../../_sources/data-science-blog/ml/clustering.ipynb"><button type="button"
+        <a class="dropdown-buttons" href="../../_sources/data-science-blog/ml/classification.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
@@ -294,7 +297,7 @@ const thebe_selector_output = ".output, .cell_output"
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/stephenleo/data-science-blog/main?urlpath=tree/data-science-blog/data-science-blog/ml/clustering.ipynb"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/stephenleo/data-science-blog/main?urlpath=tree/data-science-blog/data-science-blog/ml/classification.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="../../_static/images/logo_binder.svg"
@@ -302,7 +305,7 @@ const thebe_selector_output = ".output, .cell_output"
         
         
         
-        <a class="colab-button" href="https://colab.research.google.com/github/stephenleo/data-science-blog/blob/main/data-science-blog/data-science-blog/ml/clustering.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+        <a class="colab-button" href="https://colab.research.google.com/github/stephenleo/data-science-blog/blob/main/data-science-blog/data-science-blog/ml/classification.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
                 title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
                     src="../../_static/images/logo_colab.png"
                     alt="Interact on Colab">Colab</button></a>
@@ -322,8 +325,8 @@ const thebe_selector_output = ".output, .cell_output"
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#kmodes-clustering-of-categorical-data">
-   🍢 KModes: Clustering of Categorical Data
+  <a class="reference internal nav-link" href="#multi-label-classification-stratified-split">
+   🏏 Multi-label Classification Stratified Split
   </a>
  </li>
 </ul>
@@ -336,7 +339,7 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>🍇 Clustering</h1>
+                <h1>💠 Classification</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -347,8 +350,8 @@ const thebe_selector_output = ".output, .cell_output"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#kmodes-clustering-of-categorical-data">
-   🍢 KModes: Clustering of Categorical Data
+  <a class="reference internal nav-link" href="#multi-label-classification-stratified-split">
+   🏏 Multi-label Classification Stratified Split
   </a>
  </li>
 </ul>
@@ -360,49 +363,93 @@ const thebe_selector_output = ".output, .cell_output"
             
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="clustering">
-<h1>🍇 Clustering<a class="headerlink" href="#clustering" title="Permalink to this headline">¶</a></h1>
-<p>Unsupervised grouping of related items</p>
-<div class="section" id="kmodes-clustering-of-categorical-data">
-<h2>🍢 KModes: Clustering of Categorical Data<a class="headerlink" href="#kmodes-clustering-of-categorical-data" title="Permalink to this headline">¶</a></h2>
-<p>KModes: Clustering of Categorical Data WITHOUT One-Hot encoding!</p>
+  <div class="tex2jax_ignore mathjax_ignore section" id="classification">
+<h1>💠 Classification<a class="headerlink" href="#classification" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="multi-label-classification-stratified-split">
+<h2>🏏 Multi-label Classification Stratified Split<a class="headerlink" href="#multi-label-classification-stratified-split" title="Permalink to this headline">¶</a></h2>
+<p>Iterative Stratification: Easily stratify the train test split for multi-label classification problems</p>
 <ul class="simple">
-<li><p>KMeans clustering using Euclidean distance to find clusters so you need to one-hot encode all categorical data</p></li>
-<li><p>In KModes clustering, you can directly cluster categorical data without one-hot encoding!</p></li>
-<li><p>KModes uses the number of dissimilar values between two categorical vectors as a distance metric to assign each data point to its nearest cluster at each clustering step.</p></li>
-<li><p>Mode is the most observed value for each column in the cluster</p></li>
-<li><p>Implement in one line of code!</p></li>
-<li><p>It also supports the K-Prototypes algorithm for combining k-modes and k-means on mixed categorical + numerical data.</p></li>
+<li><p>In machine learning classification problems, when your input data has imbalanced classes, it’s necessary to stratify the train-test split so that we maintain the proportion of the minority class in both the train and test splits.</p></li>
+<li><p>Unfortunately, sklearn’s train_test_split only allows stratified splits for single-label classification and does not support multiple labels.</p></li>
 </ul>
-<p><code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">kmodes</span></code></p>
-<p>🌟 Github: <a class="reference external" href="https://github.com/nicodv/kmodes">https://github.com/nicodv/kmodes</a></p>
-<a class="bg-primary mb-1 reference internal image-reference" href="../../_images/Repos-kmodes.png"><img alt="kmodes" class="bg-primary mb-1 align-center" src="../../_images/Repos-kmodes.png" style="width: 100%;" /></a>
+<p>Enter iterative-stratification:</p>
+<ul class="simple">
+<li><p>Stratify the train test split across multiple labels concurrently</p></li>
+<li><p>With K-Fold cross-validation!</p></li>
+<li><p>Compatible with sklearn</p></li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">iterative-stratification</span></code></p>
+<p>🌟 Github: <a class="reference external" href="https://github.com/trent-b/iterative-stratification">https://github.com/trent-b/iterative-stratification</a></p>
+<p>#datascience #dataanalytics #machinelearning #python</p>
+<a class="bg-primary mb-1 reference internal image-reference" href="../../_images/Repos-iterative-stratification.png"><img alt="multi-label stratified split" class="bg-primary mb-1 align-center" src="../../_images/Repos-iterative-stratification.png" style="width: 100%;" /></a>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">from</span> <span class="nn">kmodes.kmodes</span> <span class="kn">import</span> <span class="n">KModes</span>
-<span class="kn">from</span> <span class="nn">kmodes.kprototypes</span> <span class="kn">import</span> <span class="n">KPrototypes</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">from</span> <span class="nn">iterstrat.ml_stratifiers</span> <span class="kn">import</span> <span class="n">MultilabelStratifiedKFold</span>
+<span class="kn">from</span> <span class="nn">sklearn.datasets</span> <span class="kn">import</span> <span class="n">make_multilabel_classification</span>
 
-<span class="c1"># random categorical data</span>
-<span class="n">data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
 
-<span class="c1"># KModes clustering - Categorical columns only</span>
-<span class="n">km</span> <span class="o">=</span> <span class="n">KModes</span><span class="p">(</span><span class="n">n_clusters</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">n_jobs</span><span class="o">=-</span><span class="mi">1</span><span class="p">)</span>
-<span class="n">kmodes_cluster_ids</span> <span class="o">=</span> <span class="n">km</span><span class="o">.</span><span class="n">fit_predict</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">y_proportions</span><span class="p">(</span><span class="n">y</span><span class="p">):</span>
+    <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">df</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">value_counts</span><span class="p">)</span>
 
-<span class="c1"># KPrototypes clustering - Categorical + Continuous columns!</span>
-<span class="n">kproto</span> <span class="o">=</span> <span class="n">KPrototypes</span><span class="p">(</span><span class="n">n_clusters</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">n_jobs</span><span class="o">=-</span><span class="mi">1</span><span class="p">)</span>
-<span class="n">kproto_cluster_ids</span> <span class="o">=</span> <span class="n">kproto</span><span class="o">.</span><span class="n">fit_predict</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">categorical</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">])</span>
 
-<span class="c1"># Print the cluster ids for first 5 data points</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">kmodes_cluster_ids</span><span class="p">[:</span><span class="mi">5</span><span class="p">])</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">kproto_cluster_ids</span><span class="p">[:</span><span class="mi">5</span><span class="p">])</span>
+<span class="c1"># Create dummy multi-label data</span>
+<span class="n">X</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">make_multilabel_classification</span><span class="p">(</span><span class="n">n_samples</span><span class="o">=</span><span class="mi">10_000</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="c1"># Stratified K-Fold split</span>
+<span class="n">mskf</span> <span class="o">=</span> <span class="n">MultilabelStratifiedKFold</span><span class="p">(</span><span class="n">n_splits</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">shuffle</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">train_index</span><span class="p">,</span> <span class="n">test_index</span> <span class="ow">in</span> <span class="n">mskf</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+    <span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span> <span class="o">=</span> <span class="n">X</span><span class="p">[</span><span class="n">train_index</span><span class="p">],</span> <span class="n">X</span><span class="p">[</span><span class="n">test_index</span><span class="p">]</span>
+    <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">y</span><span class="p">[</span><span class="n">train_index</span><span class="p">],</span> <span class="n">y</span><span class="p">[</span><span class="n">test_index</span><span class="p">]</span>
+
+    <span class="c1"># TODO: Fit and score model</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Overall</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">y_proportions</span><span class="p">(</span><span class="n">y</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[0 0 0 0 2]
-[0 0 2 3 2]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>      0     1     2     3     4
+0  4875  3619  9651  5627  7120
+1  5125  6381   349  4373  2880
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Train</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">y_proportions</span><span class="p">(</span><span class="n">y_train</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>      0     1     2     3     4
+0  3250  2413  6435  3752  4747
+1  3417  4254   232  2915  1920
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Test</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">y_proportions</span><span class="p">(</span><span class="n">y_test</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>      0     1     2     3     4
+0  1625  1206  3216  1875  2373
+1  1708  2127   117  1458   960
 </pre></div>
 </div>
 </div>
@@ -442,10 +489,10 @@ const thebe_selector_output = ".output, .cell_output"
             <p class="prev-next-title">🛠️ Feature Engineering</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="../nlp/weak_supervision.html" title="next page">
+    <a class='right-next' id="next-link" href="clustering.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">🗂️ Weak Supervision</p>
+        <p class="prev-next-title">🍇 Clustering</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

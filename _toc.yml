@@ -11,6 +11,7 @@ parts:
   chapters:
   - file: data-science-blog/ml/datasets
   - file: data-science-blog/ml/feature_engineering
+  - file: data-science-blog/ml/classification
   - file: data-science-blog/ml/clustering
 - caption: Natural Language Processing 
   chapters:

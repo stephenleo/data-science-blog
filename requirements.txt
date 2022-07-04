@@ -11,3 +11,6 @@ spacy
 spacyopentapioca
 pywikibot
 wikitextparser
+# scikit-multilearn
+# arff
+iterative-stratification
