@@ -79,7 +79,7 @@ print(y_proportions(y_test))
 # ## 🚲 Efficient Metrics Calculation
 # Typically when you want to calculate multiple metrics for a machine learning model, you’d import and run them one by one. 
 # 
-# Instead, using the get_scorer function, you can refactor your code to calculate multiple metrics with a single get_scorer method, as shown in the image.
+# Instead, you can refactor your code to calculate multiple metrics with a single get_scorer method, as shown in the image.
 # 
 # You could move metrics_list to a config.yml so that we can change the metrics calculated without changing any code!
 # 
