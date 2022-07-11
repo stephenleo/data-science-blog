@@ -52,6 +52,8 @@ const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.1/dist/embed-amd.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <link rel="shortcut icon" href="../../_static/logo.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -448,8 +450,8 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>      0     1     2     3     4
-0  3250  2413  6434  3752  4747
-1  3417  4254   233  2915  1920
+0  3249  2412  6433  3750  4746
+1  3417  4254   233  2916  1920
 </pre></div>
 </div>
 </div>
@@ -463,8 +465,8 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>      0     1     2     3     4
-0  1625  1206  3217  1875  2373
-1  1708  2127   116  1458   960
+0  1626  1207  3218  1877  2374
+1  1708  2127   116  1457   960
 </pre></div>
 </div>
 </div>
@@ -473,7 +475,7 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="section" id="efficient-metrics-calculation">
 <h2>🚲 Efficient Metrics Calculation<a class="headerlink" href="#efficient-metrics-calculation" title="Permalink to this headline">¶</a></h2>
 <p>Typically when you want to calculate multiple metrics for a machine learning model, you’d import and run them one by one.</p>
-<p>Instead, using the get_scorer function, you can refactor your code to calculate multiple metrics with a single get_scorer method, as shown in the image.</p>
+<p>Instead, you can refactor your code to calculate multiple metrics with a single get_scorer method, as shown in the image.</p>
 <p>You could move metrics_list to a config.yml so that we can change the metrics calculated without changing any code!</p>
 <p>#datascience #dataanalytics #dataengineering #machinelearning #python</p>
 <a class="bg-primary mb-1 reference internal image-reference" href="../../_images/Repos-get_scorer.png"><img alt="get_scorer method" class="bg-primary mb-1 align-center" src="../../_images/Repos-get_scorer.png" style="width: 100%;" /></a>
@@ -519,11 +521,11 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;accuracy&#39;: 0.872,
- &#39;f1&#39;: 0.8688524590163935,
- &#39;precision&#39;: 0.8818635607321131,
- &#39;recall&#39;: 0.8562197092084006,
- &#39;roc_auc&#39;: 0.8718499496913635}
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;accuracy&#39;: 0.8636,
+ &#39;f1&#39;: 0.8596130094689172,
+ &#39;precision&#39;: 0.8758389261744967,
+ &#39;recall&#39;: 0.8439773645917542,
+ &#39;roc_auc&#39;: 0.8633980251303982}
 </pre></div>
 </div>
 </div>
@@ -541,11 +543,11 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;accuracy&#39;: 0.872,
- &#39;f1&#39;: 0.8688524590163935,
- &#39;precision&#39;: 0.8818635607321131,
- &#39;recall&#39;: 0.8562197092084006,
- &#39;roc_auc&#39;: 0.9389492535632084}
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;accuracy&#39;: 0.8636,
+ &#39;f1&#39;: 0.8596130094689172,
+ &#39;precision&#39;: 0.8758389261744967,
+ &#39;recall&#39;: 0.8439773645917542,
+ &#39;roc_auc&#39;: 0.9405497298587815}
 </pre></div>
 </div>
 </div>
