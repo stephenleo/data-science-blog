@@ -76,6 +76,74 @@ print(y_proportions(y_train))
 print(y_proportions(y_test))
 
 
+# ## 🚲 Efficient Metrics Calculation
+# Typically when you want to calculate multiple metrics for a machine learning model, you’d import and run them one by one. 
+# 
+# Instead, using the get_scorer function, you can refactor your code to calculate multiple metrics with a single get_scorer method, as shown in the image.
+# 
+# You could move metrics_list to a config.yml so that we can change the metrics calculated without changing any code!
+# 
+# #datascience #dataanalytics #dataengineering #machinelearning #python
+# 
+# ```{image} images/classification/Repos-get_scorer.png
+# :alt: get_scorer method
+# :class: bg-primary mb-1
+# :width: 100%
+# :align: center
+# ```
+
+# In[5]:
+
+
+from pprint import pprint
+
+from sklearn.datasets import make_classification
+from sklearn.linear_model import LogisticRegression
+from sklearn.model_selection import train_test_split
+
+# Create dummy classification data and model
+X, y = make_classification(n_samples=10_000, random_state=1)
+X_train, X_test, y_train, y_test = train_test_split(X, y)
+
+model = LogisticRegression().fit(X_train, y_train)
+
+
+# In[6]:
+
+
+# Normal way to calculate multiple metrics 😮‍💨
+from sklearn.metrics import (
+    accuracy_score,
+    f1_score,
+    precision_score,
+    recall_score,
+    roc_auc_score,
+)
+
+y_pred = model.predict(X_test)
+
+metrics = {}
+metrics["accuracy"] = accuracy_score(y_test, y_pred)
+metrics["precision"] = precision_score(y_test, y_pred)
+metrics["recall"] = recall_score(y_test, y_pred)
+metrics["f1"] = f1_score(y_test, y_pred)
+metrics["roc_auc"] = roc_auc_score(y_test, y_pred)
+
+pprint(metrics)
+
+
+# In[7]:
+
+
+# Better way to calculate multiple metrics 🤓
+from sklearn.metrics import get_scorer
+
+metrics_list = ["accuracy", "precision", "recall", "f1", "roc_auc"]
+metrics = {metric: get_scorer(metric)(model, X_test, y_test) for metric in metrics_list}
+
+pprint(metrics)
+
+
 # In[ ]:
 
 

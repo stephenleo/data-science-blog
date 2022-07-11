@@ -172,6 +172,11 @@ const thebe_selector_output = ".output, .cell_output"
    💹 Stock Technical Analysis
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../time_series/forecasting.html">
+   🔮 Forecasting
+  </a>
+ </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
@@ -329,6 +334,11 @@ const thebe_selector_output = ".output, .cell_output"
    🏏 Multi-label Classification Stratified Split
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#efficient-metrics-calculation">
+   🚲 Efficient Metrics Calculation
+  </a>
+ </li>
 </ul>
 
             </nav>
@@ -352,6 +362,11 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#multi-label-classification-stratified-split">
    🏏 Multi-label Classification Stratified Split
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#efficient-metrics-calculation">
+   🚲 Efficient Metrics Calculation
   </a>
  </li>
 </ul>
@@ -433,8 +448,8 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>      0     1     2     3     4
-0  3250  2413  6435  3752  4747
-1  3417  4254   232  2915  1920
+0  3250  2413  6434  3752  4747
+1  3417  4254   233  2915  1920
 </pre></div>
 </div>
 </div>
@@ -448,8 +463,89 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>      0     1     2     3     4
-0  1625  1206  3216  1875  2373
-1  1708  2127   117  1458   960
+0  1625  1206  3217  1875  2373
+1  1708  2127   116  1458   960
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="efficient-metrics-calculation">
+<h2>🚲 Efficient Metrics Calculation<a class="headerlink" href="#efficient-metrics-calculation" title="Permalink to this headline">¶</a></h2>
+<p>Typically when you want to calculate multiple metrics for a machine learning model, you’d import and run them one by one.</p>
+<p>Instead, using the get_scorer function, you can refactor your code to calculate multiple metrics with a single get_scorer method, as shown in the image.</p>
+<p>You could move metrics_list to a config.yml so that we can change the metrics calculated without changing any code!</p>
+<p>#datascience #dataanalytics #dataengineering #machinelearning #python</p>
+<a class="bg-primary mb-1 reference internal image-reference" href="../../_images/Repos-get_scorer.png"><img alt="get_scorer method" class="bg-primary mb-1 align-center" src="../../_images/Repos-get_scorer.png" style="width: 100%;" /></a>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pprint</span> <span class="kn">import</span> <span class="n">pprint</span>
+
+<span class="kn">from</span> <span class="nn">sklearn.datasets</span> <span class="kn">import</span> <span class="n">make_classification</span>
+<span class="kn">from</span> <span class="nn">sklearn.linear_model</span> <span class="kn">import</span> <span class="n">LogisticRegression</span>
+<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span>
+
+<span class="c1"># Create dummy classification data and model</span>
+<span class="n">X</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">make_classification</span><span class="p">(</span><span class="n">n_samples</span><span class="o">=</span><span class="mi">10_000</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+
+<span class="n">model</span> <span class="o">=</span> <span class="n">LogisticRegression</span><span class="p">()</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Normal way to calculate multiple metrics 😮‍💨</span>
+<span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="p">(</span>
+    <span class="n">accuracy_score</span><span class="p">,</span>
+    <span class="n">f1_score</span><span class="p">,</span>
+    <span class="n">precision_score</span><span class="p">,</span>
+    <span class="n">recall_score</span><span class="p">,</span>
+    <span class="n">roc_auc_score</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="n">y_pred</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+
+<span class="n">metrics</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="n">metrics</span><span class="p">[</span><span class="s2">&quot;accuracy&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">accuracy_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">)</span>
+<span class="n">metrics</span><span class="p">[</span><span class="s2">&quot;precision&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">precision_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">)</span>
+<span class="n">metrics</span><span class="p">[</span><span class="s2">&quot;recall&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">recall_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">)</span>
+<span class="n">metrics</span><span class="p">[</span><span class="s2">&quot;f1&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">f1_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">)</span>
+<span class="n">metrics</span><span class="p">[</span><span class="s2">&quot;roc_auc&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">roc_auc_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">)</span>
+
+<span class="n">pprint</span><span class="p">(</span><span class="n">metrics</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;accuracy&#39;: 0.872,
+ &#39;f1&#39;: 0.8688524590163935,
+ &#39;precision&#39;: 0.8818635607321131,
+ &#39;recall&#39;: 0.8562197092084006,
+ &#39;roc_auc&#39;: 0.8718499496913635}
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Better way to calculate multiple metrics 🤓</span>
+<span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">get_scorer</span>
+
+<span class="n">metrics_list</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;accuracy&quot;</span><span class="p">,</span> <span class="s2">&quot;precision&quot;</span><span class="p">,</span> <span class="s2">&quot;recall&quot;</span><span class="p">,</span> <span class="s2">&quot;f1&quot;</span><span class="p">,</span> <span class="s2">&quot;roc_auc&quot;</span><span class="p">]</span>
+<span class="n">metrics</span> <span class="o">=</span> <span class="p">{</span><span class="n">metric</span><span class="p">:</span> <span class="n">get_scorer</span><span class="p">(</span><span class="n">metric</span><span class="p">)(</span><span class="n">model</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_test</span><span class="p">)</span> <span class="k">for</span> <span class="n">metric</span> <span class="ow">in</span> <span class="n">metrics_list</span><span class="p">}</span>
+
+<span class="n">pprint</span><span class="p">(</span><span class="n">metrics</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;accuracy&#39;: 0.872,
+ &#39;f1&#39;: 0.8688524590163935,
+ &#39;precision&#39;: 0.8818635607321131,
+ &#39;recall&#39;: 0.8562197092084006,
+ &#39;roc_auc&#39;: 0.9389492535632084}
 </pre></div>
 </div>
 </div>

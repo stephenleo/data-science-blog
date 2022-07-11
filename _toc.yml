@@ -21,6 +21,7 @@ parts:
 - caption: Time Series / Stocks
   chapters:
   - file: data-science-blog/time_series/stock_technical_analysis
+  - file: data-science-blog/time_series/forecasting
 - caption: Cloud
   chapters:
   - file: data-science-blog/cloud/apis

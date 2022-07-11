@@ -11,6 +11,7 @@ spacy
 spacyopentapioca
 pywikibot
 wikitextparser
-# scikit-multilearn
-# arff
 iterative-stratification
+rapidfuzz
+thefuzz[speedup]
+Faker
