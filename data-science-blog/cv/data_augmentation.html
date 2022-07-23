@@ -6,57 +6,58 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>💡 Welcome to the Data Science Blog &#8212; Data Science Blog</title>
+    <title>🖼️ Computer Vision Data Augmentation &#8212; Data Science Blog</title>
     
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 
     
   <link rel="stylesheet"
-    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
   <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
   <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+  <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/clipboard.min.js"></script>
-    <script src="../_static/copybutton.js"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../_static/togglebutton.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../_static/design-tabs.js"></script>
+    <script src="../../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
 const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
-    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.1/dist/embed-amd.js"></script>
-    <link rel="shortcut icon" href="../_static/logo.png"/>
-    <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="🐼 Pandas" href="python/pandas.html" />
+    <link rel="shortcut icon" href="../../_static/logo.png"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="🗂️ Weak Supervision" href="../nlp/weak_supervision.html" />
+    <link rel="prev" title="🍇 Clustering" href="../ml/clustering.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -91,27 +92,27 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="bd-sidebar noprint" id="site-navigation">
     <div class="bd-sidebar__content">
         <div class="bd-sidebar__top"><div class="navbar-brand-box">
-    <a class="navbar-brand text-wrap" href="../index.html">
+    <a class="navbar-brand text-wrap" href="../../index.html">
       
         <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
         
       
       
-      <img src="../_static/logo.png" class="logo" alt="logo">
+      <img src="../../_static/logo.png" class="logo" alt="logo">
       
       
       <h1 class="site-logo" id="site-title">Data Science Blog</h1>
       
     </a>
-</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
-            <li class="toctree-l1 current active">
-                <a class="reference internal" href="#">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
                     💡 Welcome to the Data Science Blog
                 </a>
             </li>
@@ -123,7 +124,7 @@ const thebe_selector_output = ".output, .cell_output"
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="python/pandas.html">
+  <a class="reference internal" href="../python/pandas.html">
    🐼 Pandas
   </a>
  </li>
@@ -135,22 +136,22 @@ const thebe_selector_output = ".output, .cell_output"
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="ml/datasets.html">
+  <a class="reference internal" href="../ml/datasets.html">
    🗄️ Datasets
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="ml/feature_engineering.html">
+  <a class="reference internal" href="../ml/feature_engineering.html">
    🛠️ Feature Engineering
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="ml/classification.html">
+  <a class="reference internal" href="../ml/classification.html">
    💠 Classification
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="ml/clustering.html">
+  <a class="reference internal" href="../ml/clustering.html">
    🍇 Clustering
   </a>
  </li>
@@ -160,9 +161,9 @@ const thebe_selector_output = ".output, .cell_output"
   Computer Vision
  </span>
 </p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="cv/data_augmentation.html">
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
    🖼️ Computer Vision Data Augmentation
   </a>
  </li>
@@ -174,17 +175,17 @@ const thebe_selector_output = ".output, .cell_output"
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="nlp/weak_supervision.html">
+  <a class="reference internal" href="../nlp/weak_supervision.html">
    🗂️ Weak Supervision
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="nlp/keyphrase_extraction.html">
+  <a class="reference internal" href="../nlp/keyphrase_extraction.html">
    🔑 Keyphrase Extraction
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="nlp/named_entity_resolution.html">
+  <a class="reference internal" href="../nlp/named_entity_resolution.html">
    🔀 Named Entity Resolution
   </a>
  </li>
@@ -196,12 +197,12 @@ const thebe_selector_output = ".output, .cell_output"
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="time_series/stock_technical_analysis.html">
+  <a class="reference internal" href="../time_series/stock_technical_analysis.html">
    💹 Stock Technical Analysis
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="time_series/forecasting.html">
+  <a class="reference internal" href="../time_series/forecasting.html">
    🔮 Forecasting
   </a>
  </li>
@@ -213,17 +214,17 @@ const thebe_selector_output = ".output, .cell_output"
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="cloud/apis.html">
+  <a class="reference internal" href="../cloud/apis.html">
    📟 Application Programming Interface (API)
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="cloud/file_storage.html">
+  <a class="reference internal" href="../cloud/file_storage.html">
    🗄️ File Storage (S3, GCS, etc)
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="cloud/sagemaker.html">
+  <a class="reference internal" href="../cloud/sagemaker.html">
    🧘 AWS Sagemaker
   </a>
  </li>
@@ -235,7 +236,7 @@ const thebe_selector_output = ".output, .cell_output"
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="good_coding/refactoring.html">
+  <a class="reference internal" href="../good_coding/refactoring.html">
    🔩 Refactoring
   </a>
  </li>
@@ -247,7 +248,7 @@ const thebe_selector_output = ".output, .cell_output"
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="career/career_advice.html">
+  <a class="reference internal" href="../career/career_advice.html">
    👔 Career Advice
   </a>
  </li>
@@ -302,6 +303,53 @@ title="Toggle navigation"
         
     </div>
     <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/stephenleo/data-science-blog/main?urlpath=tree/data-science-blog/data-science-blog/cv/data_augmentation.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../../_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://colab.research.google.com/github/stephenleo/data-science-blog/blob/main/data-science-blog/data-science-blog/cv/data_augmentation.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Colab"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../../_static/images/logo_colab.png">
+  </span>
+<span class="headerbtn__text-container">Colab</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
 <button onclick="toggleFullScreen()"
   class="headerbtn"
   data-toggle="tooltip"
@@ -337,7 +385,7 @@ title="Source repository"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../_sources/data-science-blog/intro.md"
+        <a href="../../_sources/data-science-blog/cv/data_augmentation.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -348,7 +396,7 @@ title="Download source file"
 <span class="headerbtn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="headerbtn__text-container">.md</span>
+<span class="headerbtn__text-container">.ipynb</span>
 </a>
 
       </li>
@@ -374,23 +422,60 @@ title="Print to PDF"
     </ul>
   </div>
 </div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
 
     </div>
 </div>
 
 <!-- Table of contents -->
 <div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#albumentations-fast-computer-vision-augmentations">
+   🎨 Albumentations: Fast computer vision augmentations
+  </a>
+ </li>
+</ul>
+
+    </nav>
 </div>
     </div>
     <div class="article row">
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>💡 Welcome to the Data Science Blog</h1>
+                <h1>🖼️ Computer Vision Data Augmentation</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#albumentations-fast-computer-vision-augmentations">
+   🎨 Albumentations: Fast computer vision augmentations
+  </a>
+ </li>
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
@@ -398,29 +483,17 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="welcome-to-the-data-science-blog">
-<h1>💡 Welcome to the Data Science Blog<a class="headerlink" href="#welcome-to-the-data-science-blog" title="Permalink to this headline">#</a></h1>
-<p>👋 Hi there! My name is Marie Stephen Leo. I actively share Data Science content on my <a class="reference external" href="https://www.linkedin.com/in/marie-stephen-leo">Linkedin profile</a> and <a class="reference external" href="https://medium.com/&#64;stephen-leo">Medium blog</a>.</p>
-<p>📖 This online book contains all the content I share on Linkedin and Medium</p>
-<p>🚀 To follow along by executing the code, click on the “launch” button at the top of the page</p>
-<p>🌟 If you like this blog, please give it a star by clicking on the Github icon on the top of the page.</p>
-<p>⚡ For the latest updates, let’s connect on <a class="reference external" href="https://www.linkedin.com/in/marie-stephen-leo">Linkedin</a> and <a class="reference external" href="https://medium.com/&#64;stephen-leo">Medium</a>!</p>
-<div class="toctree-wrapper compound">
-</div>
-<div class="toctree-wrapper compound">
-</div>
-<div class="toctree-wrapper compound">
-</div>
-<div class="toctree-wrapper compound">
-</div>
-<div class="toctree-wrapper compound">
-</div>
-<div class="toctree-wrapper compound">
-</div>
-<div class="toctree-wrapper compound">
-</div>
-<div class="toctree-wrapper compound">
-</div>
+  <section class="tex2jax_ignore mathjax_ignore" id="computer-vision-data-augmentation">
+<h1>🖼️ Computer Vision Data Augmentation<a class="headerlink" href="#computer-vision-data-augmentation" title="Permalink to this headline">#</a></h1>
+<section id="albumentations-fast-computer-vision-augmentations">
+<h2>🎨 Albumentations: Fast computer vision augmentations<a class="headerlink" href="#albumentations-fast-computer-vision-augmentations" title="Permalink to this headline">#</a></h2>
+<p>If you need lightning-fast image augmentations, stick to the albumentations library. It easily outperforms AugLy, imgaug and torchvision by a lot!</p>
+<p><code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">albumentations</span></code></p>
+<p>🌟 GitHub: <a class="reference external" href="https://github.com/albumentations-team/albumentations">https://github.com/albumentations-team/albumentations</a></p>
+<p>📖 Paper: <a class="reference external" href="https://openaccess.thecvf.com/content/CVPR2022W/ArtOfRobust/papers/Papakipos_AugLy_Data_Augmentations_for_Adversarial_Robustness_CVPRW_2022_paper.pdf">https://openaccess.thecvf.com/content/CVPR2022W/ArtOfRobust/papers/Papakipos_AugLy_Data_Augmentations_for_Adversarial_Robustness_CVPRW_2022_paper.pdf</a></p>
+<p>#datascience #machinelearning #computervision #artificialintelligence</p>
+<a class="bg-primary mb-1 reference internal image-reference" href="data-science-blog/cv/images/augmentation/albumentations_benchmark.jpg"><img alt="albumentations_benchmark" class="bg-primary mb-1 align-center" src="data-science-blog/cv/images/augmentation/albumentations_benchmark.jpg" style="width: 100%;" /></a>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -436,7 +509,7 @@ title="Print to PDF"
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./data-science-blog"
+            path: "./data-science-blog/cv"
         },
         predefinedOutput: true
     }
@@ -450,10 +523,17 @@ title="Print to PDF"
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='right-next' id="next-link" href="python/pandas.html" title="next page">
+    <a class='left-prev' id="prev-link" href="../ml/clustering.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">🍇 Clustering</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="../nlp/weak_supervision.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">🐼 Pandas</p>
+        <p class="prev-next-title">🗂️ Weak Supervision</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
@@ -478,7 +558,7 @@ title="Print to PDF"
     </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+  <script src="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
 
 
   </body>
