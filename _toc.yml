@@ -13,6 +13,9 @@ parts:
   - file: data-science-blog/ml/feature_engineering
   - file: data-science-blog/ml/classification
   - file: data-science-blog/ml/clustering
+- caption: Computer Vision
+  chapters:
+  - file: data-science-blog/cv/data_augmentation
 - caption: Natural Language Processing 
   chapters:
   - file: data-science-blog/nlp/weak_supervision
@@ -45,12 +48,6 @@ parts:
 #   numbered: true
 #   chapters:
 #   - file: data-science-blog/python/
-#   sections:
-#   - file: path/to/part1/chapter2/section1
-# - caption: Computer Vision
-#   numbered: true
-#   chapters:
-#   - file: data-science-blog/cv/
 #   sections:
 #   - file: path/to/part1/chapter2/section1
 # - caption: Networks & Graphs
