@@ -20,8 +20,8 @@ jobs:
 
     # Build the book
     - name: Build the book
+      shell: bash -l {0}
       run: |
-        micromamba activate blog
         jupyter-book clean . --all
         jupyter-book build .
 
