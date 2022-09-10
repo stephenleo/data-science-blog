@@ -16,7 +16,7 @@ jobs:
     - name: Install Mamba environment with Micromamba
       uses: mamba-org/provision-with-micromamba@main
       with:
-        environment-file: environment.yaml
+        environment-file: environment.yml
 
     # Build the book
     - name: Build the book
