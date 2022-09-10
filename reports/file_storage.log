@@ -39,7 +39,7 @@ with open(file_to_read) as f:
 
 [0;31m---------------------------------------------------------------------------[0m
 [0;31mNoCredentialsError[0m                        Traceback (most recent call last)
-Input [0;32mIn [1][0m, in [0;36m<cell line: 12>[0;34m()[0m
+Cell [0;32mIn [1], line 12[0m
 [1;32m     10[0m split_filename [38;5;241m=[39m file_to_read[38;5;241m.[39msplit([38;5;124m"[39m[38;5;124m/[39m[38;5;124m"[39m)
 [1;32m     11[0m obj [38;5;241m=[39m s3[38;5;241m.[39mObject(split_filename[[38;5;241m2[39m], [38;5;124m"[39m[38;5;124m/[39m[38;5;124m"[39m[38;5;241m.[39mjoin(split_filename[[38;5;241m3[39m:]))
 [0;32m---> 12[0m body [38;5;241m=[39m [43mobj[49m[38;5;241;43m.[39;49m[43mget[49m[43m([49m[43m)[49m[[38;5;124m"[39m[38;5;124mBody[39m[38;5;124m"[39m][38;5;241m.[39mread()
@@ -67,38 +67,38 @@ File [0;32m/opt/hostedtoolcache/Python/3.8.13/x64/lib/python3.8/site-packages/b
 [1;32m     90[0m logger[38;5;241m.[39mdebug([38;5;124m'[39m[38;5;124mResponse: [39m[38;5;132;01m%r[39;00m[38;5;124m'[39m, response)
 [1;32m     92[0m [38;5;28;01mreturn[39;00m [38;5;28mself[39m[38;5;241m.[39m_response_handler(parent, params, response)
 
-File [0;32m/opt/hostedtoolcache/Python/3.8.13/x64/lib/python3.8/site-packages/botocore/client.py:508[0m, in [0;36mClientCreator._create_api_method.<locals>._api_call[0;34m(self, *args, **kwargs)[0m
-[1;32m    504[0m     [38;5;28;01mraise[39;00m [38;5;167;01mTypeError[39;00m(
-[1;32m    505[0m         [38;5;124mf[39m[38;5;124m"[39m[38;5;132;01m{[39;00mpy_operation_name[38;5;132;01m}[39;00m[38;5;124m() only accepts keyword arguments.[39m[38;5;124m"[39m
-[1;32m    506[0m     )
-[1;32m    507[0m [38;5;66;03m# The "self" in this scope is referring to the BaseClient.[39;00m
-[0;32m--> 508[0m [38;5;28;01mreturn[39;00m [38;5;28;43mself[39;49m[38;5;241;43m.[39;49m[43m_make_api_call[49m[43m([49m[43moperation_name[49m[43m,[49m[43m [49m[43mkwargs[49m[43m)[49m
+File [0;32m/opt/hostedtoolcache/Python/3.8.13/x64/lib/python3.8/site-packages/botocore/client.py:514[0m, in [0;36mClientCreator._create_api_method.<locals>._api_call[0;34m(self, *args, **kwargs)[0m
+[1;32m    510[0m     [38;5;28;01mraise[39;00m [38;5;167;01mTypeError[39;00m(
+[1;32m    511[0m         [38;5;124mf[39m[38;5;124m"[39m[38;5;132;01m{[39;00mpy_operation_name[38;5;132;01m}[39;00m[38;5;124m() only accepts keyword arguments.[39m[38;5;124m"[39m
+[1;32m    512[0m     )
+[1;32m    513[0m [38;5;66;03m# The "self" in this scope is referring to the BaseClient.[39;00m
+[0;32m--> 514[0m [38;5;28;01mreturn[39;00m [38;5;28;43mself[39;49m[38;5;241;43m.[39;49m[43m_make_api_call[49m[43m([49m[43moperation_name[49m[43m,[49m[43m [49m[43mkwargs[49m[43m)[49m
 
-File [0;32m/opt/hostedtoolcache/Python/3.8.13/x64/lib/python3.8/site-packages/botocore/client.py:898[0m, in [0;36mBaseClient._make_api_call[0;34m(self, operation_name, api_params)[0m
-[1;32m    896[0m [38;5;28;01melse[39;00m:
-[1;32m    897[0m     apply_request_checksum(request_dict)
-[0;32m--> 898[0m     http, parsed_response [38;5;241m=[39m [38;5;28;43mself[39;49m[38;5;241;43m.[39;49m[43m_make_request[49m[43m([49m
-[1;32m    899[0m [43m        [49m[43moperation_model[49m[43m,[49m[43m [49m[43mrequest_dict[49m[43m,[49m[43m [49m[43mrequest_context[49m
-[1;32m    900[0m [43m    [49m[43m)[49m
-[1;32m    902[0m [38;5;28mself[39m[38;5;241m.[39mmeta[38;5;241m.[39mevents[38;5;241m.[39memit(
-[1;32m    903[0m     [38;5;124m'[39m[38;5;124mafter-call.[39m[38;5;132;01m{service_id}[39;00m[38;5;124m.[39m[38;5;132;01m{operation_name}[39;00m[38;5;124m'[39m[38;5;241m.[39mformat(
-[1;32m    904[0m         service_id[38;5;241m=[39mservice_id, operation_name[38;5;241m=[39moperation_name
+File [0;32m/opt/hostedtoolcache/Python/3.8.13/x64/lib/python3.8/site-packages/botocore/client.py:921[0m, in [0;36mBaseClient._make_api_call[0;34m(self, operation_name, api_params)[0m
+[1;32m    919[0m [38;5;28;01melse[39;00m:
+[1;32m    920[0m     apply_request_checksum(request_dict)
+[0;32m--> 921[0m     http, parsed_response [38;5;241m=[39m [38;5;28;43mself[39;49m[38;5;241;43m.[39;49m[43m_make_request[49m[43m([49m
+[1;32m    922[0m [43m        [49m[43moperation_model[49m[43m,[49m[43m [49m[43mrequest_dict[49m[43m,[49m[43m [49m[43mrequest_context[49m
+[1;32m    923[0m [43m    [49m[43m)[49m
+[1;32m    925[0m [38;5;28mself[39m[38;5;241m.[39mmeta[38;5;241m.[39mevents[38;5;241m.[39memit(
+[1;32m    926[0m     [38;5;124m'[39m[38;5;124mafter-call.[39m[38;5;132;01m{service_id}[39;00m[38;5;124m.[39m[38;5;132;01m{operation_name}[39;00m[38;5;124m'[39m[38;5;241m.[39mformat(
+[1;32m    927[0m         service_id[38;5;241m=[39mservice_id, operation_name[38;5;241m=[39moperation_name
 [0;32m   (...)[0m
-[1;32m    909[0m     context[38;5;241m=[39mrequest_context,
-[1;32m    910[0m )
-[1;32m    912[0m [38;5;28;01mif[39;00m http[38;5;241m.[39mstatus_code [38;5;241m>[39m[38;5;241m=[39m [38;5;241m300[39m:
+[1;32m    932[0m     context[38;5;241m=[39mrequest_context,
+[1;32m    933[0m )
+[1;32m    935[0m [38;5;28;01mif[39;00m http[38;5;241m.[39mstatus_code [38;5;241m>[39m[38;5;241m=[39m [38;5;241m300[39m:
 
-File [0;32m/opt/hostedtoolcache/Python/3.8.13/x64/lib/python3.8/site-packages/botocore/client.py:921[0m, in [0;36mBaseClient._make_request[0;34m(self, operation_model, request_dict, request_context)[0m
-[1;32m    919[0m [38;5;28;01mdef[39;00m [38;5;21m_make_request[39m([38;5;28mself[39m, operation_model, request_dict, request_context):
-[1;32m    920[0m     [38;5;28;01mtry[39;00m:
-[0;32m--> 921[0m         [38;5;28;01mreturn[39;00m [38;5;28;43mself[39;49m[38;5;241;43m.[39;49m[43m_endpoint[49m[38;5;241;43m.[39;49m[43mmake_request[49m[43m([49m[43moperation_model[49m[43m,[49m[43m [49m[43mrequest_dict[49m[43m)[49m
-[1;32m    922[0m     [38;5;28;01mexcept[39;00m [38;5;167;01mException[39;00m [38;5;28;01mas[39;00m e:
-[1;32m    923[0m         [38;5;28mself[39m[38;5;241m.[39mmeta[38;5;241m.[39mevents[38;5;241m.[39memit(
-[1;32m    924[0m             [38;5;124m'[39m[38;5;124mafter-call-error.[39m[38;5;132;01m{service_id}[39;00m[38;5;124m.[39m[38;5;132;01m{operation_name}[39;00m[38;5;124m'[39m[38;5;241m.[39mformat(
-[1;32m    925[0m                 service_id[38;5;241m=[39m[38;5;28mself[39m[38;5;241m.[39m_service_model[38;5;241m.[39mservice_id[38;5;241m.[39mhyphenize(),
+File [0;32m/opt/hostedtoolcache/Python/3.8.13/x64/lib/python3.8/site-packages/botocore/client.py:944[0m, in [0;36mBaseClient._make_request[0;34m(self, operation_model, request_dict, request_context)[0m
+[1;32m    942[0m [38;5;28;01mdef[39;00m [38;5;21m_make_request[39m([38;5;28mself[39m, operation_model, request_dict, request_context):
+[1;32m    943[0m     [38;5;28;01mtry[39;00m:
+[0;32m--> 944[0m         [38;5;28;01mreturn[39;00m [38;5;28;43mself[39;49m[38;5;241;43m.[39;49m[43m_endpoint[49m[38;5;241;43m.[39;49m[43mmake_request[49m[43m([49m[43moperation_model[49m[43m,[49m[43m [49m[43mrequest_dict[49m[43m)[49m
+[1;32m    945[0m     [38;5;28;01mexcept[39;00m [38;5;167;01mException[39;00m [38;5;28;01mas[39;00m e:
+[1;32m    946[0m         [38;5;28mself[39m[38;5;241m.[39mmeta[38;5;241m.[39mevents[38;5;241m.[39memit(
+[1;32m    947[0m             [38;5;124m'[39m[38;5;124mafter-call-error.[39m[38;5;132;01m{service_id}[39;00m[38;5;124m.[39m[38;5;132;01m{operation_name}[39;00m[38;5;124m'[39m[38;5;241m.[39mformat(
+[1;32m    948[0m                 service_id[38;5;241m=[39m[38;5;28mself[39m[38;5;241m.[39m_service_model[38;5;241m.[39mservice_id[38;5;241m.[39mhyphenize(),
 [0;32m   (...)[0m
-[1;32m    929[0m             context[38;5;241m=[39mrequest_context,
-[1;32m    930[0m         )
+[1;32m    952[0m             context[38;5;241m=[39mrequest_context,
+[1;32m    953[0m         )
 
 File [0;32m/opt/hostedtoolcache/Python/3.8.13/x64/lib/python3.8/site-packages/botocore/endpoint.py:119[0m, in [0;36mEndpoint.make_request[0;34m(self, operation_model, request_dict)[0m
 [1;32m    113[0m [38;5;28;01mdef[39;00m [38;5;21mmake_request[39m([38;5;28mself[39m, operation_model, request_dict):
@@ -158,25 +158,25 @@ File [0;32m/opt/hostedtoolcache/Python/3.8.13/x64/lib/python3.8/site-packages/b
 [1;32m    240[0m     responses[38;5;241m.[39mappend((handler, response))
 [1;32m    241[0m     [38;5;28;01mif[39;00m stop_on_response [38;5;129;01mand[39;00m response [38;5;129;01mis[39;00m [38;5;129;01mnot[39;00m [38;5;28;01mNone[39;00m:
 
-File [0;32m/opt/hostedtoolcache/Python/3.8.13/x64/lib/python3.8/site-packages/botocore/signers.py:103[0m, in [0;36mRequestSigner.handler[0;34m(self, operation_name, request, **kwargs)[0m
-[1;32m     98[0m [38;5;28;01mdef[39;00m [38;5;21mhandler[39m([38;5;28mself[39m, operation_name[38;5;241m=[39m[38;5;28;01mNone[39;00m, request[38;5;241m=[39m[38;5;28;01mNone[39;00m, [38;5;241m*[39m[38;5;241m*[39mkwargs):
-[1;32m     99[0m     [38;5;66;03m# This is typically hooked up to the "request-created" event[39;00m
-[1;32m    100[0m     [38;5;66;03m# from a client's event emitter.  When a new request is created[39;00m
-[1;32m    101[0m     [38;5;66;03m# this method is invoked to sign the request.[39;00m
-[1;32m    102[0m     [38;5;66;03m# Don't call this method directly.[39;00m
-[0;32m--> 103[0m     [38;5;28;01mreturn[39;00m [38;5;28;43mself[39;49m[38;5;241;43m.[39;49m[43msign[49m[43m([49m[43moperation_name[49m[43m,[49m[43m [49m[43mrequest[49m[43m)[49m
+File [0;32m/opt/hostedtoolcache/Python/3.8.13/x64/lib/python3.8/site-packages/botocore/signers.py:105[0m, in [0;36mRequestSigner.handler[0;34m(self, operation_name, request, **kwargs)[0m
+[1;32m    100[0m [38;5;28;01mdef[39;00m [38;5;21mhandler[39m([38;5;28mself[39m, operation_name[38;5;241m=[39m[38;5;28;01mNone[39;00m, request[38;5;241m=[39m[38;5;28;01mNone[39;00m, [38;5;241m*[39m[38;5;241m*[39mkwargs):
+[1;32m    101[0m     [38;5;66;03m# This is typically hooked up to the "request-created" event[39;00m
+[1;32m    102[0m     [38;5;66;03m# from a client's event emitter.  When a new request is created[39;00m
+[1;32m    103[0m     [38;5;66;03m# this method is invoked to sign the request.[39;00m
+[1;32m    104[0m     [38;5;66;03m# Don't call this method directly.[39;00m
+[0;32m--> 105[0m     [38;5;28;01mreturn[39;00m [38;5;28;43mself[39;49m[38;5;241;43m.[39;49m[43msign[49m[43m([49m[43moperation_name[49m[43m,[49m[43m [49m[43mrequest[49m[43m)[49m
 
-File [0;32m/opt/hostedtoolcache/Python/3.8.13/x64/lib/python3.8/site-packages/botocore/signers.py:187[0m, in [0;36mRequestSigner.sign[0;34m(self, operation_name, request, region_name, signing_type, expires_in, signing_name)[0m
-[1;32m    184[0m     [38;5;28;01melse[39;00m:
-[1;32m    185[0m         [38;5;28;01mraise[39;00m e
-[0;32m--> 187[0m [43mauth[49m[38;5;241;43m.[39;49m[43madd_auth[49m[43m([49m[43mrequest[49m[43m)[49m
+File [0;32m/opt/hostedtoolcache/Python/3.8.13/x64/lib/python3.8/site-packages/botocore/signers.py:189[0m, in [0;36mRequestSigner.sign[0;34m(self, operation_name, request, region_name, signing_type, expires_in, signing_name)[0m
+[1;32m    186[0m     [38;5;28;01melse[39;00m:
+[1;32m    187[0m         [38;5;28;01mraise[39;00m e
+[0;32m--> 189[0m [43mauth[49m[38;5;241;43m.[39;49m[43madd_auth[49m[43m([49m[43mrequest[49m[43m)[49m
 
-File [0;32m/opt/hostedtoolcache/Python/3.8.13/x64/lib/python3.8/site-packages/botocore/auth.py:407[0m, in [0;36mSigV4Auth.add_auth[0;34m(self, request)[0m
-[1;32m    405[0m [38;5;28;01mdef[39;00m [38;5;21madd_auth[39m([38;5;28mself[39m, request):
-[1;32m    406[0m     [38;5;28;01mif[39;00m [38;5;28mself[39m[38;5;241m.[39mcredentials [38;5;129;01mis[39;00m [38;5;28;01mNone[39;00m:
-[0;32m--> 407[0m         [38;5;28;01mraise[39;00m NoCredentialsError()
-[1;32m    408[0m     datetime_now [38;5;241m=[39m datetime[38;5;241m.[39mdatetime[38;5;241m.[39mutcnow()
-[1;32m    409[0m     request[38;5;241m.[39mcontext[[38;5;124m'[39m[38;5;124mtimestamp[39m[38;5;124m'[39m] [38;5;241m=[39m datetime_now[38;5;241m.[39mstrftime(SIGV4_TIMESTAMP)
+File [0;32m/opt/hostedtoolcache/Python/3.8.13/x64/lib/python3.8/site-packages/botocore/auth.py:418[0m, in [0;36mSigV4Auth.add_auth[0;34m(self, request)[0m
+[1;32m    416[0m [38;5;28;01mdef[39;00m [38;5;21madd_auth[39m([38;5;28mself[39m, request):
+[1;32m    417[0m     [38;5;28;01mif[39;00m [38;5;28mself[39m[38;5;241m.[39mcredentials [38;5;129;01mis[39;00m [38;5;28;01mNone[39;00m:
+[0;32m--> 418[0m         [38;5;28;01mraise[39;00m NoCredentialsError()
+[1;32m    419[0m     datetime_now [38;5;241m=[39m datetime[38;5;241m.[39mdatetime[38;5;241m.[39mutcnow()
+[1;32m    420[0m     request[38;5;241m.[39mcontext[[38;5;124m'[39m[38;5;124mtimestamp[39m[38;5;124m'[39m] [38;5;241m=[39m datetime_now[38;5;241m.[39mstrftime(SIGV4_TIMESTAMP)
 
 [0;31mNoCredentialsError[0m: Unable to locate credentials
 NoCredentialsError: Unable to locate credentials

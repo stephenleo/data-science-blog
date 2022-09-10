@@ -500,38 +500,18 @@ title="Print to PDF"
 </ul>
 <p>While deploying ML models (e.g., in Sagemaker), you need to handle converting to and from the JSON object. So keeping your deployment consistent with JSON lines format will make your life much easier and unambiguous.</p>
 <p>#mlops #datascience #dataanalytics #dataengineering #aws #sagemaker #gcp #azure #python</p>
+<p><a class="reference external" href="https://snappify.io/view/6f162780-cc5c-4ea5-bad8-9a183b12a2d6">https://snappify.io/view/6f162780-cc5c-4ea5-bad8-9a183b12a2d6</a></p>
 <a class="bg-primary mb-1 reference internal image-reference" href="../../_images/Tips-json_lines.png"><img alt="json lines" class="bg-primary mb-1 align-center" src="../../_images/Tips-json_lines.png" style="width: 100%;" /></a>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-
-<span class="c1"># Create dummy dataframe</span>
-<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s2">&quot;col_a&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mf">1.5</span><span class="p">,</span> <span class="mf">2.3</span><span class="p">],</span> <span class="s2">&quot;col_b&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mf">200.1</span><span class="p">,</span> <span class="mf">150.6</span><span class="p">],</span> <span class="s2">&quot;col_c&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">]})</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
-
-<span class="c1"># Pandas Dataframe to JSON lines string</span>
-<span class="n">json_lines_str</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">to_json</span><span class="p">(</span><span class="n">orient</span><span class="o">=</span><span class="s2">&quot;records&quot;</span><span class="p">,</span> <span class="n">lines</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">json_lines_str</span><span class="p">)</span>
-
-<span class="c1"># JSON lines string to Pandas Dataframe</span>
-<span class="n">df_reconstructed</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_json</span><span class="p">(</span><span class="n">json_lines_str</span><span class="p">,</span> <span class="n">lines</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">df_reconstructed</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%html</span>
+<span class="p">&lt;</span><span class="nt">iframe</span> <span class="na">width</span><span class="o">=</span><span class="s">&quot;1679&quot;</span> <span class="na">height</span><span class="o">=</span><span class="s">&quot;1069&quot;</span> <span class="na">title</span><span class="o">=</span><span class="s">&quot;Code snippet - json_lines&quot;</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://snappify.io/embed/6f162780-cc5c-4ea5-bad8-9a183b12a2d6&quot;</span> <span class="na">allow</span><span class="o">=</span><span class="s">&quot;clipboard-write&quot;</span> <span class="na">style</span><span class="o">=</span><span class="s">&quot;border-radius:10px;background:linear-gradient(354deg,  #FF75B5, #FFB86C)&quot;</span> <span class="na">frameborder</span><span class="o">=</span><span class="s">&quot;0&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">iframe</span><span class="p">&gt;</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>   col_a  col_b col_c
-0    1.5  200.1     a
-1    2.3  150.6     b
-{&quot;col_a&quot;:1.5,&quot;col_b&quot;:200.1,&quot;col_c&quot;:&quot;a&quot;}
-{&quot;col_a&quot;:2.3,&quot;col_b&quot;:150.6,&quot;col_c&quot;:&quot;b&quot;}
-
-   col_a  col_b col_c
-0    1.5  200.1     a
-1    2.3  150.6     b
-</pre></div>
-</div>
-</div>
+<div class="output text_html"><iframe width="1679" height="1069" title="Code snippet - json_lines" src="https://snappify.io/embed/6f162780-cc5c-4ea5-bad8-9a183b12a2d6" allow="clipboard-write" style="border-radius:10px;background:linear-gradient(354deg,  #FF75B5, #FFB86C)" frameborder="0"></iframe>
+</div></div>
 </div>
 </section>
 </section>
