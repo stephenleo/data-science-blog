@@ -5,74 +5,82 @@ format: jb-book
 root: README
 options:
   numbered: True
-chapters:
-- file: data-science-blog/python/python
-  sections:
-  - file: data-science-blog/python/pandas
-- file: data-science-blog/ml/ml.md 
-  sections:
-  - file: data-science-blog/ml/datasets
-  - file: data-science-blog/ml/feature_engineering
-  - file: data-science-blog/ml/classification
-  - file: data-science-blog/ml/clustering
-- file: data-science-blog/cv/cv.md
-  sections:
-  - file: data-science-blog/cv/data_augmentation
-- file: data-science-blog/nlp/nlp.md 
-  sections:
-  - file: data-science-blog/nlp/weak_supervision
-  - file: data-science-blog/nlp/keyphrase_extraction
-  - file: data-science-blog/nlp/named_entity_resolution
-- file: data-science-blog/time_series/time_series.md
-  sections:
-  - file: data-science-blog/time_series/stock_technical_analysis
-  - file: data-science-blog/time_series/forecasting
-- file: data-science-blog/cloud/cloud.md
-  sections:
-  - file: data-science-blog/cloud/apis
-  - file: data-science-blog/cloud/file_storage
-  - file: data-science-blog/cloud/sagemaker
-- file: data-science-blog/good_coding/good_coding.md
-  sections:
-  - file: data-science-blog/good_coding/refactoring
-- file: data-science-blog/career/career.md
-  sections:
-  - file: data-science-blog/career/career_advice
-  # sections:
-  # - file: path/to/part1/chapter2/section1
-# - caption: SQL
-#   numbered: true
-#   chapters:
-#   - file: data-science-blog/sql/
-#   sections:
-#   - file: path/to/part1/chapter2/section1
-# - caption: Python
-#   numbered: true
-#   chapters:
-#   - file: data-science-blog/python/
-#   sections:
-#   - file: path/to/part1/chapter2/section1
-# - caption: Networks & Graphs
-#   numbered: true
-#   chapters:
-#   - file: data-science-blog/network/
-#   sections:
-#   - file: path/to/part1/chapter2/section1
-# - caption: MLOps
-#   numbered: true
-#   chapters:
-#   - file: data-science-blog/mlops/
-#   sections:
-#   - file: path/to/part1/chapter2/section1
-# - caption: Neural Search
-#   numbered: true
-#   chapters:
-#   - file: data-science-blog/neural_search/
-#   sections:
-#   - file: path/to/part1/chapter2/section1
-# - caption: Visualisation
-#   numbered: true
-#   chapters:
-#   - file: data-science-blog/visualisation/
-#   sections:
-#   - file: path/to/part1/chapter2/section1
+parts: 
+- caption: Byte size posts
+  chapters:
+  - file: data-science-blog/python/python
+    sections:
+    - file: data-science-blog/python/pandas
+  - file: data-science-blog/ml/ml.md 
+    sections:
+    - file: data-science-blog/ml/datasets
+    - file: data-science-blog/ml/eda
+    - file: data-science-blog/ml/feature_engineering
+    - file: data-science-blog/ml/classification
+    - file: data-science-blog/ml/clustering
+  - file: data-science-blog/cv/cv.md
+    sections:
+    - file: data-science-blog/cv/data_augmentation
+  - file: data-science-blog/nlp/nlp.md 
+    sections:
+    - file: data-science-blog/nlp/pre_processing
+    - file: data-science-blog/nlp/semantic_similarity
+    - file: data-science-blog/nlp/weak_supervision
+    - file: data-science-blog/nlp/keyphrase_extraction
+    - file: data-science-blog/nlp/named_entity_resolution
+  - file: data-science-blog/time_series/time_series.md
+    sections:
+    - file: data-science-blog/time_series/stock_technical_analysis
+    - file: data-science-blog/time_series/forecasting
+  - file: data-science-blog/cloud/cloud.md
+    sections:
+    - file: data-science-blog/cloud/apis
+    - file: data-science-blog/cloud/file_storage
+    - file: data-science-blog/cloud/sagemaker
+    - file: data-science-blog/cloud/gpu
+  - file: data-science-blog/good_coding/good_coding.md
+    sections:
+    - file: data-science-blog/good_coding/refactoring
+  - file: data-science-blog/career/career.md
+    sections:
+    - file: data-science-blog/career/portfolio
+    - file: data-science-blog/career/career_advice
+    # sections:
+    # - file: path/to/part1/chapter2/section1
+  # - caption: SQL
+  #   numbered: true
+  #   chapters:
+  #   - file: data-science-blog/sql/
+  #   sections:
+  #   - file: path/to/part1/chapter2/section1
+  # - caption: Python
+  #   numbered: true
+  #   chapters:
+  #   - file: data-science-blog/python/
+  #   sections:
+  #   - file: path/to/part1/chapter2/section1
+  # - caption: Networks & Graphs
+  #   numbered: true
+  #   chapters:
+  #   - file: data-science-blog/network/
+  #   sections:
+  #   - file: path/to/part1/chapter2/section1
+  # - caption: MLOps
+  #   numbered: true
+  #   chapters:
+  #   - file: data-science-blog/mlops/
+  #   sections:
+  #   - file: path/to/part1/chapter2/section1
+  # - caption: Neural Search
+  #   numbered: true
+  #   chapters:
+  #   - file: data-science-blog/neural_search/
+  #   sections:
+  #   - file: path/to/part1/chapter2/section1
+  # - caption: Visualisation
+  #   numbered: true
+  #   chapters:
+  #   - file: data-science-blog/visualisation/
+  #   sections:
+  #   - file: path/to/part1/chapter2/section1
+# - caption: In-depth blog posts
