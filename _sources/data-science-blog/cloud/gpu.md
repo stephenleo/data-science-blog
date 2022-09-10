@@ -24,3 +24,5 @@ Having said that, the best ways to get started with a GPU are entirely free, alb
 2. Kaggle: https://www.kaggle.com/general/97939#1651969
 3. AWS Sagemaker Studio Lab: https://aws.amazon.com/sagemaker/studio-lab/
 4. Gradient Notebooks: https://gradient.run/
+
+![](images/gpu/cpu_vs_gpu.png)
