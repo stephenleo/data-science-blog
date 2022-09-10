@@ -12,15 +12,11 @@ jobs:
     steps:
     - uses: actions/checkout@v2
 
-    # Install dependencies
-    - name: Set up Python 3.8
-      uses: actions/setup-python@v2
-      with:
-        python-version: 3.8
-
-    - name: Install dependencies
-      run: |
-        pip install -r requirements.txt
+    # Install Mamba environment
+    - name: Install Mamba environment with Micromamba
+        uses: mamba-org/provision-with-micromamba@main
+        with:
+          environment-file: environment.yaml
 
     # Build the book
     - name: Build the book
