@@ -22,11 +22,6 @@ jobs:
       run: |
         pip install -r requirements.txt
 
-    - name: Install Mamba environment with Micromamba
-      uses: mamba-org/provision-with-micromamba@main
-      with:
-        environment-file: environment.yml
-
     # Build the book
     - name: Build the book
       run: |
