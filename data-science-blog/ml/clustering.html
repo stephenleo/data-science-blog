@@ -51,8 +51,6 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.1/dist/embed-amd.js"></script>
     <link rel="shortcut icon" href="../../_static/logo.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -499,38 +497,7 @@ title="Print to PDF"
 </ul>
 <p><code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">kmodes</span></code></p>
 <p>🌟 Github: <a class="reference external" href="https://github.com/nicodv/kmodes">https://github.com/nicodv/kmodes</a></p>
-<a class="bg-primary mb-1 reference internal image-reference" href="../../_images/Repos-kmodes.png"><img alt="kmodes" class="bg-primary mb-1 align-center" src="../../_images/Repos-kmodes.png" style="width: 100%;" /></a>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">from</span> <span class="nn">kmodes.kmodes</span> <span class="kn">import</span> <span class="n">KModes</span>
-<span class="kn">from</span> <span class="nn">kmodes.kprototypes</span> <span class="kn">import</span> <span class="n">KPrototypes</span>
-
-<span class="c1"># random categorical data</span>
-<span class="n">data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
-
-<span class="c1"># KModes clustering - Categorical columns only</span>
-<span class="n">km</span> <span class="o">=</span> <span class="n">KModes</span><span class="p">(</span><span class="n">n_clusters</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">n_jobs</span><span class="o">=-</span><span class="mi">1</span><span class="p">)</span>
-<span class="n">kmodes_cluster_ids</span> <span class="o">=</span> <span class="n">km</span><span class="o">.</span><span class="n">fit_predict</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
-
-<span class="c1"># KPrototypes clustering - Categorical + Continuous columns!</span>
-<span class="n">kproto</span> <span class="o">=</span> <span class="n">KPrototypes</span><span class="p">(</span><span class="n">n_clusters</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">n_jobs</span><span class="o">=-</span><span class="mi">1</span><span class="p">)</span>
-<span class="n">kproto_cluster_ids</span> <span class="o">=</span> <span class="n">kproto</span><span class="o">.</span><span class="n">fit_predict</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">categorical</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">])</span>
-
-<span class="c1"># Print the cluster ids for first 5 data points</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">kmodes_cluster_ids</span><span class="p">[:</span><span class="mi">5</span><span class="p">])</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">kproto_cluster_ids</span><span class="p">[:</span><span class="mi">5</span><span class="p">])</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1 3 1 3 0]
-[2 0 2 0 0]
-</pre></div>
-</div>
-</div>
-</div>
-</section>
+<iframe width="740" height="480" title="Code snippet - kmodes" src="https://snappify.io/embed/c9b463e2-e263-4d94-a5f5-da9c4694a148" allow="clipboard-write" style="border-radius:10px;background:linear-gradient(337deg, #654ea3, #da98b4)" frameborder="0"></iframe></section>
 </section>
 
     <script type="text/x-thebe-config">

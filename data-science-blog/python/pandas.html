@@ -51,8 +51,6 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.1/dist/embed-amd.js"></script>
     <link rel="shortcut icon" href="../../_static/logo.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -508,24 +506,9 @@ title="Print to PDF"
 </ul>
 <p><code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">pandas</span></code></p>
 <p>📖 Pandas for Excel practitioners: <a class="reference external" href="https://pandas.pydata.org/docs/getting_started/comparison/comparison_with_spreadsheets.html#compare-with-spreadsheets">https://pandas.pydata.org/docs/getting_started/comparison/comparison_with_spreadsheets.html#compare-with-spreadsheets</a></p>
-<p>I regularly post about practical and applied data science. If you like my posts, let’s connect here or on Twitter &#64;MarieStephenLeo!</p>
+<p>Sample data: <a class="reference external" href="https://raw.github.com/pandas-dev/pandas/main/pandas/tests/io/data/csv/tips.csv">https://raw.github.com/pandas-dev/pandas/main/pandas/tests/io/data/csv/tips.csv</a></p>
 <p>#datascience #dataanalytics #dataengineering #pandas #python #programming</p>
-<a class="bg-primary mb-1 reference internal image-reference" href="../../_images/Tips-learning_pandas.png"><img alt="learning_pandas" class="bg-primary mb-1 align-center" src="../../_images/Tips-learning_pandas.png" style="width: 100%;" /></a>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-
-<span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;https://raw.github.com/pandas-dev/pandas/main/pandas/tests/io/data/csv/tips.csv&quot;</span>
-
-<span class="n">tips</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
-<span class="n">tips_pivot</span> <span class="o">=</span> <span class="n">tips</span><span class="o">.</span><span class="n">pivot_table</span><span class="p">(</span>
-    <span class="n">values</span><span class="o">=</span><span class="s2">&quot;tip&quot;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;size&quot;</span><span class="p">],</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;sex&quot;</span><span class="p">],</span> <span class="n">aggfunc</span><span class="o">=</span><span class="s2">&quot;mean&quot;</span>
-<span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-</section>
+<iframe width="740" height="575" title="Code snippet - learning_pandas" src="https://snappify.io/embed/eeddc3ab-3624-4eae-8c37-35492d267c65" allow="clipboard-write" style="border-radius:10px;background:linear-gradient(354deg,  #FF75B5, #FFB86C)" frameborder="0"></iframe></section>
 
     <script type="text/x-thebe-config">
     {

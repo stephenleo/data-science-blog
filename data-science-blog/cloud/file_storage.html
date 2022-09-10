@@ -51,8 +51,6 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.1/dist/embed-amd.js"></script>
     <link rel="shortcut icon" href="../../_static/logo.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -498,43 +496,7 @@ title="Print to PDF"
 <p>🌟 Github: <a class="reference external" href="https://github.com/RaRe-Technologies/smart_open">https://github.com/RaRe-Technologies/smart_open</a></p>
 <p>📖 More examples: <a class="reference external" href="https://github.com/RaRe-Technologies/smart_open/blob/develop/howto.md">https://github.com/RaRe-Technologies/smart_open/blob/develop/howto.md</a></p>
 <p>#datascience #dataanalytics #dataengineering #aws #gcp #azure #python</p>
-<a class="bg-primary mb-1 reference internal image-reference" href="../../_images/Repos-smart_open.png"><img alt="smart_open" class="bg-primary mb-1 align-center" src="../../_images/Repos-smart_open.png" style="width: 100%;" /></a>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Imports</span>
-<span class="kn">import</span> <span class="nn">boto3</span>
-<span class="kn">from</span> <span class="nn">smart_open</span> <span class="kn">import</span> <span class="nb">open</span>
-
-<span class="n">file_to_read</span> <span class="o">=</span> <span class="s2">&quot;s3://commoncrawl/robots.txt&quot;</span>
-
-<span class="c1"># With Boto3 - 🥴</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;-----Reading with Boto3-----&quot;</span><span class="p">)</span>
-<span class="n">s3</span> <span class="o">=</span> <span class="n">boto3</span><span class="o">.</span><span class="n">resource</span><span class="p">(</span><span class="s2">&quot;s3&quot;</span><span class="p">)</span>
-<span class="n">split_filename</span> <span class="o">=</span> <span class="n">file_to_read</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;/&quot;</span><span class="p">)</span>
-<span class="n">obj</span> <span class="o">=</span> <span class="n">s3</span><span class="o">.</span><span class="n">Object</span><span class="p">(</span><span class="n">split_filename</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="s2">&quot;/&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">split_filename</span><span class="p">[</span><span class="mi">3</span><span class="p">:]))</span>
-<span class="n">body</span> <span class="o">=</span> <span class="n">obj</span><span class="o">.</span><span class="n">get</span><span class="p">()[</span><span class="s2">&quot;Body&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">body</span><span class="o">.</span><span class="n">decode</span><span class="p">())</span>
-
-<span class="c1"># With Smart Open! - 😎</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">-----Reading with Smart Open-----&quot;</span><span class="p">)</span>
-<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">file_to_read</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">())</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-----Reading with Boto3-----
-User-Agent: *
-Disallow: /
-
------Reading with Smart Open-----
-User-Agent: *
-Disallow: /
-</pre></div>
-</div>
-</div>
-</div>
-</section>
+<iframe width="740" height="575" title="Code snippet - smart_open" src="https://snappify.io/embed/3f153f9c-3222-499d-bf73-e2f726fa693c" allow="clipboard-write" style="border-radius:10px;background:linear-gradient(337deg, #654ea3, #da98b4)" frameborder="0"></iframe></section>
 </section>
 
     <script type="text/x-thebe-config">
