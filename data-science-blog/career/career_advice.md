@@ -1,6 +1,6 @@
-# 👔 Career Advice
+# Career Advice
 
-## 🧑‍💻 Coding manager
+## Coding manager
 
 I still code ~30% of my time despite managing a team!
 
@@ -16,7 +16,7 @@ I am sharing this here for the wider community looking to break into this field.
 
 #datascience #dataanalytics #technology #careeradvice
 
-## 📅 A Typical Week in the life of a Data Scientist
+## A Typical Week in the life of a Data Scientist
 
 ### Work:
 1. Review your JIRA tickets to decide what to work on this week. Curse at the awful JIRA UI.
@@ -38,7 +38,7 @@ I am sharing this here for the wider community looking to break into this field.
 
 #datascience #dataanalytics #career
 
-## 🪥 Data Curation
+## Data Curation
 
 Data Scientists spend 80% (or more!) of their time collecting and cleaning up data in the real world. Preparing a clean, representative dataset is often more important than what algorithm you finally use to solve your problem.
 

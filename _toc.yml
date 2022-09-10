@@ -2,39 +2,41 @@
 # Learn more at https://jupyterbook.org/customize/toc.html
 
 format: jb-book
-root: data-science-blog/intro
-parts:
-- caption: Python
-  chapters:
+root: README
+options:
+  numbered: True
+chapters:
+- file: data-science-blog/python/python
+  sections:
   - file: data-science-blog/python/pandas
-- caption: Machine Learning 
-  chapters:
+- file: data-science-blog/ml/ml.md 
+  sections:
   - file: data-science-blog/ml/datasets
   - file: data-science-blog/ml/feature_engineering
   - file: data-science-blog/ml/classification
   - file: data-science-blog/ml/clustering
-- caption: Computer Vision
-  chapters:
+- file: data-science-blog/cv/cv.md
+  sections:
   - file: data-science-blog/cv/data_augmentation
-- caption: Natural Language Processing 
-  chapters:
+- file: data-science-blog/nlp/nlp.md 
+  sections:
   - file: data-science-blog/nlp/weak_supervision
   - file: data-science-blog/nlp/keyphrase_extraction
   - file: data-science-blog/nlp/named_entity_resolution
-- caption: Time Series / Stocks
-  chapters:
+- file: data-science-blog/time_series/time_series.md
+  sections:
   - file: data-science-blog/time_series/stock_technical_analysis
   - file: data-science-blog/time_series/forecasting
-- caption: Cloud
-  chapters:
+- file: data-science-blog/cloud/cloud.md
+  sections:
   - file: data-science-blog/cloud/apis
   - file: data-science-blog/cloud/file_storage
   - file: data-science-blog/cloud/sagemaker
-- caption: Good Coding Practices
-  chapters:
+- file: data-science-blog/good_coding/good_coding.md
+  sections:
   - file: data-science-blog/good_coding/refactoring
-- caption: Data Science Career
-  chapters:
+- file: data-science-blog/career/career.md
+  sections:
   - file: data-science-blog/career/career_advice
   # sections:
   # - file: path/to/part1/chapter2/section1
