@@ -6,7 +6,7 @@ root: README
 options:
   numbered: True
 parts: 
-- caption: Byte size posts
+- caption: Minibatches
   chapters:
   - file: data-science-blog/python/python
     sections:
@@ -83,4 +83,4 @@ parts:
   #   - file: data-science-blog/visualisation/
   #   sections:
   #   - file: path/to/part1/chapter2/section1
-# - caption: In-depth blog posts
+# - caption: Epochs
