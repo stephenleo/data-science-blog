@@ -18,7 +18,7 @@ Sample data: [Link](https://raw.github.com/pandas-dev/pandas/main/pandas/tests/i
 
 #datascience #dataanalytics #dataengineering #pandas #python #programming
 
-<div style="overflow:hidden;margin-left:auto;margin-right:auto;border-radius:10px;width:100%;max-width:740px;position:relative"><div style="width:100%;padding-bottom:77.70270270270271%"></div><iframe width="740" height="575" title="Code snippet - learning_pandas" src="https://snappify.io/embed/eeddc3ab-3624-4eae-8c37-35492d267c65?responsive" allow="clipboard-write" style="background:linear-gradient(354deg,  #FF75B5, #FFB86C);position:absolute;left:0;top:0" frameborder="0"></iframe></div>
+<div style="overflow:hidden;margin-left:auto;margin-right:auto;border-radius:10px;width:100%;max-width:740px;position:relative"><div style="width:100%;padding-bottom:77.70270270270271%"></div><iframe width="740" height="575" title="Code snippet - learning_pandas" src="https://snappify.io/embed/eeddc3ab-3624-4eae-8c37-35492d267c65?responsive" allow="clipboard-write" style="background:linear-gradient(354deg,  #FF75B5, #FFB86C);position:absolute;left:0;top:0;width:100%" frameborder="0"></iframe></div>
 
 ## Pandas Plotly Backend
 👉  It's no secret that I love **[Plotly](https://www.linkedin.com/feed/#)** for plotting in Python! I've always found Matplotlib unnecessarily complex and verbose for my everyday data analysis & plotting needs. In addition to the interactivity, Plotly produces visually attractive and professional-looking plots out of the box!
@@ -33,4 +33,4 @@ Now, I just wish to make this somehow the default when importing Pandas! 😊
 
 🌟 Demo notebook: https://www.kaggle.com/stephenleo/pandas-plotly-backend
 
-<div style="overflow:hidden;margin-left:auto;margin-right:auto;border-radius:10px;width:100%;max-width:740px;position:relative"><div style="width:100%;padding-bottom:143.78378378378378%"></div><iframe width="740" height="1064" title="Code snippet - pandas_plotly_backend" src="https://snappify.io/embed/5e62b3fa-155a-4191-9853-fa06f2d1c4f0?responsive" allow="clipboard-write" style="background:linear-gradient(337deg, #654ea3, #da98b4);position:absolute;left:0;top:0" frameborder="0"></iframe></div>
+<div style="overflow:hidden;margin-left:auto;margin-right:auto;border-radius:10px;width:100%;max-width:740px;position:relative"><div style="width:100%;padding-bottom:143.78378378378378%"></div><iframe width="740" height="1064" title="Code snippet - pandas_plotly_backend" src="https://snappify.io/embed/5e62b3fa-155a-4191-9853-fa06f2d1c4f0?responsive" allow="clipboard-write" style="background:linear-gradient(337deg, #654ea3, #da98b4);position:absolute;left:0;top:0;width:100%" frameborder="0"></iframe></div>
