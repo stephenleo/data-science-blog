@@ -11,40 +11,39 @@ parts:
   - file: data-science-blog/python/python
     sections:
     - file: data-science-blog/python/pandas
-  - file: data-science-blog/ml/ml.md 
+  - file: data-science-blog/ml/ml
     sections:
     - file: data-science-blog/ml/datasets
     - file: data-science-blog/ml/eda
     - file: data-science-blog/ml/feature_engineering
     - file: data-science-blog/ml/classification
     - file: data-science-blog/ml/clustering
-  - file: data-science-blog/cv/cv.md
+  - file: data-science-blog/cv/cv
     sections:
     - file: data-science-blog/cv/data_augmentation
-  - file: data-science-blog/nlp/nlp.md 
+  - file: data-science-blog/nlp/nlp
     sections:
     - file: data-science-blog/nlp/pre_processing
     - file: data-science-blog/nlp/semantic_similarity
     - file: data-science-blog/nlp/weak_supervision
     - file: data-science-blog/nlp/keyphrase_extraction
     - file: data-science-blog/nlp/named_entity_resolution
-  - file: data-science-blog/time_series/time_series.md
+  - file: data-science-blog/time_series/time_series
     sections:
     - file: data-science-blog/time_series/stock_technical_analysis
-    - file: data-science-blog/time_series/forecasting
-  - file: data-science-blog/cloud/cloud.md
+  - file: data-science-blog/cloud/cloud
     sections:
-    - file: data-science-blog/cloud/apis
+    - file: data-science-blog/cloud/compute
     - file: data-science-blog/cloud/file_storage
+    - file: data-science-blog/cloud/api
     - file: data-science-blog/cloud/sagemaker
-    - file: data-science-blog/cloud/gpu
-  - file: data-science-blog/good_coding/good_coding.md
+  - file: data-science-blog/good_coding/good_coding
     sections:
     - file: data-science-blog/good_coding/refactoring
-  - file: data-science-blog/career/career.md
+  - file: data-science-blog/career/career
     sections:
-    - file: data-science-blog/career/portfolio
     - file: data-science-blog/career/career_advice
+    - file: data-science-blog/career/portfolio
     # sections:
     # - file: path/to/part1/chapter2/section1
   # - caption: SQL
