@@ -133,7 +133,9 @@ const thebe_selector_output = ".output, .cell_output"
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../python/pandas.html">
-     Pandas
+     <strong>
+      Pandas
+     </strong>
     </a>
    </li>
   </ul>
@@ -244,11 +246,6 @@ const thebe_selector_output = ".output, .cell_output"
      Stock Technical Analysis
     </a>
    </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../time_series/forecasting.html">
-     Forecasting
-    </a>
-   </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
@@ -262,8 +259,8 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../cloud/apis.html">
-     Application Programming Interface (API)
+    <a class="reference internal" href="../cloud/compute.html">
+     Compute
     </a>
    </li>
    <li class="toctree-l2">
@@ -272,13 +269,13 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../cloud/sagemaker.html">
-     AWS Sagemaker
+    <a class="reference internal" href="../cloud/api.html">
+     Application Programming Interface (API)
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../cloud/gpu.html">
-     GPU
+    <a class="reference internal" href="../cloud/sagemaker.html">
+     AWS Sagemaker
     </a>
    </li>
   </ul>
@@ -311,13 +308,13 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../career/portfolio.html">
-     Portfolio
+    <a class="reference internal" href="../career/career_advice.html">
+     Career Advice
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../career/career_advice.html">
-     Career Advice
+    <a class="reference internal" href="../career/portfolio.html">
+     Portfolio
     </a>
    </li>
   </ul>
@@ -373,53 +370,6 @@ title="Toggle navigation"
         
     </div>
     <div class="header-article__right">
-<div class="menu-dropdown menu-dropdown-launch-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Launch interactive content">
-      <i class="fas fa-rocket"></i>
-  </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="https://mybinder.org/v2/gh/stephenleo/data-science-blog/main?urlpath=tree/data-science-blog/data-science-blog/ml/clustering.ipynb"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Launch on Binder"
->
-  
-
-<span class="headerbtn__icon-container">
-  
-    <img src="../../_static/images/logo_binder.svg">
-  </span>
-<span class="headerbtn__text-container">Binder</span>
-</a>
-
-      </li>
-      
-      <li>
-        <a href="https://colab.research.google.com/github/stephenleo/data-science-blog/blob/main/data-science-blog/data-science-blog/ml/clustering.ipynb"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Launch on Colab"
->
-  
-
-<span class="headerbtn__icon-container">
-  
-    <img src="../../_static/images/logo_colab.png">
-  </span>
-<span class="headerbtn__text-container">Colab</span>
-</a>
-
-      </li>
-      
-    </ul>
-  </div>
-</div>
-
 <button onclick="toggleFullScreen()"
   class="headerbtn"
   data-toggle="tooltip"
@@ -455,7 +405,7 @@ title="Source repository"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../../_sources/data-science-blog/ml/clustering.ipynb"
+        <a href="../../_sources/data-science-blog/ml/clustering.md"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -466,7 +416,7 @@ title="Download source file"
 <span class="headerbtn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="headerbtn__text-container">.ipynb</span>
+<span class="headerbtn__text-container">.md</span>
 </a>
 
       </li>
@@ -560,16 +510,25 @@ title="Print to PDF"
 <h2>KModes: Clustering of Categorical Data<a class="headerlink" href="#kmodes-clustering-of-categorical-data" title="Permalink to this headline">#</a></h2>
 <p>KModes: Clustering of Categorical Data WITHOUT One-Hot encoding!</p>
 <ul class="simple">
-<li><p>KMeans clustering using Euclidean distance to find clusters so you need to one-hot encode all categorical data</p></li>
-<li><p>In KModes clustering, you can directly cluster categorical data without one-hot encoding!</p></li>
-<li><p>KModes uses the number of dissimilar values between two categorical vectors as a distance metric to assign each data point to its nearest cluster at each clustering step.</p></li>
+<li><p>KMeans clustering using Euclidean distance to find clusters so you
+need to one-hot encode all categorical data</p></li>
+<li><p>In KModes clustering, you can directly cluster categorical data
+without one-hot encoding!</p></li>
+<li><p>KModes uses the number of dissimilar values between two categorical
+vectors as a distance metric to assign each data point to its
+nearest cluster at each clustering step.</p></li>
 <li><p>Mode is the most observed value for each column in the cluster</p></li>
 <li><p>Implement in one line of code!</p></li>
-<li><p>It also supports the K-Prototypes algorithm for combining k-modes and k-means on mixed categorical + numerical data.</p></li>
+<li><p>It also supports the K-Prototypes algorithm for combining k-modes
+and k-means on mixed categorical + numerical data.</p></li>
 </ul>
-<p><code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">kmodes</span></code></p>
+<!-- -->
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>pip install kmodes
+</pre></div>
+</div>
 <p>🌟 Github: <a class="reference external" href="https://github.com/nicodv/kmodes">https://github.com/nicodv/kmodes</a></p>
-<iframe width="740" height="480" title="Code snippet - kmodes" src="https://snappify.io/embed/c9b463e2-e263-4d94-a5f5-da9c4694a148" allow="clipboard-write" style="border-radius:10px;background:linear-gradient(337deg, #654ea3, #da98b4)" frameborder="0"></iframe></section>
+<div style="overflow:hidden;margin-left:auto;margin-right:auto;border-radius:10px;width:100%;max-width:740px;position:relative"><div style="width:100%;padding-bottom:64.86486486486486%"></div><iframe width="740" height="480" title="Code snippet - kmodes" src="https://snappify.io/embed/c9b463e2-e263-4d94-a5f5-da9c4694a148?responsive" allow="clipboard-write" style="background:linear-gradient(337deg, #654ea3, #da98b4);position:absolute;left:0;top:0;width:100%" frameborder="0"></iframe></div>
+</section>
 </section>
 
     <script type="text/x-thebe-config">

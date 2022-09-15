@@ -54,8 +54,8 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="../../_static/logo.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="GPU" href="gpu.html" />
-    <link rel="prev" title="File Storage (S3, GCS, etc)" href="file_storage.html" />
+    <link rel="next" title="🔩 Good Coding Practices" href="../good_coding/good_coding.html" />
+    <link rel="prev" title="Application Programming Interface (API)" href="api.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -133,7 +133,9 @@ const thebe_selector_output = ".output, .cell_output"
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../python/pandas.html">
-     Pandas
+     <strong>
+      Pandas
+     </strong>
     </a>
    </li>
   </ul>
@@ -244,11 +246,6 @@ const thebe_selector_output = ".output, .cell_output"
      Stock Technical Analysis
     </a>
    </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../time_series/forecasting.html">
-     Forecasting
-    </a>
-   </li>
   </ul>
  </li>
  <li class="toctree-l1 current active has-children">
@@ -262,8 +259,8 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul class="current">
    <li class="toctree-l2">
-    <a class="reference internal" href="apis.html">
-     Application Programming Interface (API)
+    <a class="reference internal" href="compute.html">
+     Compute
     </a>
    </li>
    <li class="toctree-l2">
@@ -271,14 +268,14 @@ const thebe_selector_output = ".output, .cell_output"
      File Storage (S3, GCS, etc)
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="api.html">
+     Application Programming Interface (API)
+    </a>
+   </li>
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
      AWS Sagemaker
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="gpu.html">
-     GPU
     </a>
    </li>
   </ul>
@@ -311,13 +308,13 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../career/portfolio.html">
-     Portfolio
+    <a class="reference internal" href="../career/career_advice.html">
+     Career Advice
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../career/career_advice.html">
-     Career Advice
+    <a class="reference internal" href="../career/portfolio.html">
+     Portfolio
     </a>
    </li>
   </ul>
@@ -373,53 +370,6 @@ title="Toggle navigation"
         
     </div>
     <div class="header-article__right">
-<div class="menu-dropdown menu-dropdown-launch-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Launch interactive content">
-      <i class="fas fa-rocket"></i>
-  </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="https://mybinder.org/v2/gh/stephenleo/data-science-blog/main?urlpath=tree/data-science-blog/data-science-blog/cloud/sagemaker.ipynb"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Launch on Binder"
->
-  
-
-<span class="headerbtn__icon-container">
-  
-    <img src="../../_static/images/logo_binder.svg">
-  </span>
-<span class="headerbtn__text-container">Binder</span>
-</a>
-
-      </li>
-      
-      <li>
-        <a href="https://colab.research.google.com/github/stephenleo/data-science-blog/blob/main/data-science-blog/data-science-blog/cloud/sagemaker.ipynb"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Launch on Colab"
->
-  
-
-<span class="headerbtn__icon-container">
-  
-    <img src="../../_static/images/logo_colab.png">
-  </span>
-<span class="headerbtn__text-container">Colab</span>
-</a>
-
-      </li>
-      
-    </ul>
-  </div>
-</div>
-
 <button onclick="toggleFullScreen()"
   class="headerbtn"
   data-toggle="tooltip"
@@ -455,7 +405,7 @@ title="Source repository"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../../_sources/data-science-blog/cloud/sagemaker.ipynb"
+        <a href="../../_sources/data-science-blog/cloud/sagemaker.md"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -466,7 +416,7 @@ title="Download source file"
 <span class="headerbtn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="headerbtn__text-container">.ipynb</span>
+<span class="headerbtn__text-container">.md</span>
 </a>
 
       </li>
@@ -569,40 +519,53 @@ title="Print to PDF"
 <h2>AWS Sagemaker Serverless<a class="headerlink" href="#aws-sagemaker-serverless" title="Permalink to this headline">#</a></h2>
 <p>Major cost savings on ML endpoints with AWS Sagemaker!</p>
 <ul class="simple">
-<li><p>In the past when you deploy an ML model as a Real-Time Inference endpoint on Sagemaker, you’ve had to keep the deployment instance running 24*7</p></li>
-<li><p>This is a waste of money if your ML model receives sporadic traffic with some periods of 0 traffic as your instance is running idle</p></li>
+<li><p>In the past when you deploy an ML model as a Real-Time Inference
+endpoint on Sagemaker, you’ve had to keep the deployment instance
+running 24*7</p></li>
+<li><p>This is a waste of money if your ML model receives sporadic traffic
+with some periods of 0 traffic as your instance is running idle</p></li>
 </ul>
 <p>Enter Sagemaker serverless!</p>
 <ul class="simple">
-<li><p>During times when there is no traffic, Serverless Inference scales your endpoint down to 0, helping you to minimize your costs!</p></li>
-<li><p>There will be some cold start when there is traffic after a long period of inactivity. In my experience with scikit-learn models, the cold start is &lt;2s!</p></li>
+<li><p>During times when there is no traffic, Serverless Inference scales
+your endpoint down to 0, helping you to minimize your costs!</p></li>
+<li><p>There will be some cold start when there is traffic after a long
+period of inactivity. In my experience with scikit-learn models, the
+cold start is &lt;2s!</p></li>
 <li><p>Implement with just one line of code change</p></li>
 </ul>
-<p>📖 Docs: <a class="reference external" href="https://docs.aws.amazon.com/sagemaker/latest/dg/serverless-endpoints.html">https://docs.aws.amazon.com/sagemaker/latest/dg/serverless-endpoints.html</a></p>
-<p>#datascience #dataanalytics #dataengineering #aws #gcp #azure #python</p>
-<iframe width="740" height="575" title="Code snippet - sagemaker_serverless" src="https://snappify.io/embed/0183efa9-d63a-405a-ba15-6eb1d7a8c5d3" allow="clipboard-write" style="border-radius:10px;background:linear-gradient(337deg, #654ea3, #da98b4)" frameborder="0"></iframe></section>
+<p>📖 Docs:
+<a class="reference external" href="https://docs.aws.amazon.com/sagemaker/latest/dg/serverless-endpoints.html">https://docs.aws.amazon.com/sagemaker/latest/dg/serverless-endpoints.html</a></p>
+<div style="overflow:hidden;margin-left:auto;margin-right:auto;border-radius:10px;width:100%;max-width:740px;position:relative"><div style="width:100%;padding-bottom:77.70270270270271%"></div><iframe width="740" height="575" title="Code snippet - sagemaker_serverless" src="https://snappify.io/embed/0183efa9-d63a-405a-ba15-6eb1d7a8c5d3?responsive" allow="clipboard-write" style="background:linear-gradient(337deg, #654ea3, #da98b4);position:absolute;left:0;top:0;width:100%" frameborder="0"></iframe></div>
+</section>
 <section id="aws-sagemaker-inference">
 <h2>AWS Sagemaker Inference<a class="headerlink" href="#aws-sagemaker-inference" title="Permalink to this headline">#</a></h2>
-<p>AWS Sagemaker is one of the easiest ways I’ve come across for deploying Machine Learning models as a Data Scientist.</p>
-<ul class="simple">
-<li><p>Create a simple <code class="docutils literal notranslate"><span class="pre">serve.py</span></code> file with just four functions</p></li>
-<li><p>model_fn: To load the model from a file</p></li>
-<li><p>input_fn: Convert input JSON data into a pandas dataframe. Do any other preprocessing BEFORE model predictions here</p></li>
-<li><p>predict_fn: Run the model predictions</p></li>
-<li><p>output_fn: Post-process the predictions and convert them to JSON</p></li>
-<li><p>As a pre-requisite, your trained model should be zipped as a tar.gz file on S3</p></li>
+<p>AWS Sagemaker is one of the easiest ways I’ve come across for deploying
+Machine Learning models as a Data Scientist.</p>
+<ul class="contains-task-list simple">
+<li class="task-list-item"><p><input class="task-list-item-checkbox" checked="checked" disabled="disabled" type="checkbox"> Create a simple <code class="docutils literal notranslate"><span class="pre">serve.py</span></code> file with just four functions</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" checked="checked" disabled="disabled" type="checkbox"> model_fn: To load the model from a file</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" checked="checked" disabled="disabled" type="checkbox"> input_fn: Convert input JSON data into a pandas dataframe. Do
+any other preprocessing BEFORE model predictions here</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" checked="checked" disabled="disabled" type="checkbox"> predict_fn: Run the model predictions</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" checked="checked" disabled="disabled" type="checkbox"> output_fn: Post-process the predictions and convert them to
+JSON</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" checked="checked" disabled="disabled" type="checkbox"> As a pre-requisite, your trained model should be zipped as a
+tar.gz file on S3</p></li>
 </ul>
 <p>Use the same <code class="docutils literal notranslate"><span class="pre">http://serve.py</span></code> for all of the below deployment methods!</p>
-<ul class="simple">
-<li><p>Real-time inference</p></li>
-<li><p>Multi-model endpoint</p></li>
-<li><p>Serverless inference (the topic of yesterday’s post)</p></li>
-<li><p>Batch transform</p></li>
+<ul class="contains-task-list simple">
+<li class="task-list-item"><p><input class="task-list-item-checkbox" checked="checked" disabled="disabled" type="checkbox"> Real-time inference</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" checked="checked" disabled="disabled" type="checkbox"> Multi-model endpoint</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" checked="checked" disabled="disabled" type="checkbox"> Serverless inference (the topic of yesterday’s post)</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" checked="checked" disabled="disabled" type="checkbox"> Batch transform</p></li>
 </ul>
-<p>The entire process is massively simplified if you use the JSON lines format (a topic for another post).</p>
-<p>📖 Docs: <a class="reference external" href="https://sagemaker.readthedocs.io/en/stable/frameworks/sklearn/using_sklearn.html">https://sagemaker.readthedocs.io/en/stable/frameworks/sklearn/using_sklearn.html</a></p>
-<p>#mlops #datascience #dataanalytics #dataengineering #aws #sagemaker #gcp #azure #python</p>
-<iframe width="740" height="500" title="Code snippet - sagemaker_serve.py" src="https://snappify.io/embed/eb166da8-d11e-4192-ac64-36499dae6c89" allow="clipboard-write" style="border-radius:10px;background:linear-gradient(337deg, #654ea3, #da98b4)" frameborder="0"></iframe></section>
+<p>The entire process is massively simplified if you use the JSON lines
+format (a topic for another post).</p>
+<p>📖 Docs:
+<a class="reference external" href="https://sagemaker.readthedocs.io/en/stable/frameworks/sklearn/using_sklearn.html">https://sagemaker.readthedocs.io/en/stable/frameworks/sklearn/using_sklearn.html</a></p>
+<div style="overflow:hidden;margin-left:auto;margin-right:auto;border-radius:10px;width:100%;max-width:740px;position:relative"><div style="width:100%;padding-bottom:67.56756756756756%"></div><iframe width="740" height="500" title="Code snippet - sagemaker_serve.py" src="https://snappify.io/embed/eb166da8-d11e-4192-ac64-36499dae6c89?responsive" allow="clipboard-write" style="background:linear-gradient(337deg, #654ea3, #da98b4);position:absolute;left:0;top:0;width:100%" frameborder="0"></iframe></div>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -632,17 +595,17 @@ title="Print to PDF"
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="file_storage.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="api.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">File Storage (S3, GCS, etc)</p>
+            <p class="prev-next-title">Application Programming Interface (API)</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="gpu.html" title="next page">
+    <a class='right-next' id="next-link" href="../good_coding/good_coding.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">GPU</p>
+        <p class="prev-next-title">🔩 Good Coding Practices</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

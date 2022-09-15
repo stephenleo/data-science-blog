@@ -133,7 +133,9 @@ const thebe_selector_output = ".output, .cell_output"
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../python/pandas.html">
-     Pandas
+     <strong>
+      Pandas
+     </strong>
     </a>
    </li>
   </ul>
@@ -244,11 +246,6 @@ const thebe_selector_output = ".output, .cell_output"
      Stock Technical Analysis
     </a>
    </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../time_series/forecasting.html">
-     Forecasting
-    </a>
-   </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
@@ -262,8 +259,8 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../cloud/apis.html">
-     Application Programming Interface (API)
+    <a class="reference internal" href="../cloud/compute.html">
+     Compute
     </a>
    </li>
    <li class="toctree-l2">
@@ -272,13 +269,13 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../cloud/sagemaker.html">
-     AWS Sagemaker
+    <a class="reference internal" href="../cloud/api.html">
+     Application Programming Interface (API)
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../cloud/gpu.html">
-     GPU
+    <a class="reference internal" href="../cloud/sagemaker.html">
+     AWS Sagemaker
     </a>
    </li>
   </ul>
@@ -311,13 +308,13 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../career/portfolio.html">
-     Portfolio
+    <a class="reference internal" href="../career/career_advice.html">
+     Career Advice
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../career/career_advice.html">
-     Career Advice
+    <a class="reference internal" href="../career/portfolio.html">
+     Portfolio
     </a>
    </li>
   </ul>
@@ -373,53 +370,6 @@ title="Toggle navigation"
         
     </div>
     <div class="header-article__right">
-<div class="menu-dropdown menu-dropdown-launch-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Launch interactive content">
-      <i class="fas fa-rocket"></i>
-  </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="https://mybinder.org/v2/gh/stephenleo/data-science-blog/main?urlpath=tree/data-science-blog/data-science-blog/cv/data_augmentation.ipynb"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Launch on Binder"
->
-  
-
-<span class="headerbtn__icon-container">
-  
-    <img src="../../_static/images/logo_binder.svg">
-  </span>
-<span class="headerbtn__text-container">Binder</span>
-</a>
-
-      </li>
-      
-      <li>
-        <a href="https://colab.research.google.com/github/stephenleo/data-science-blog/blob/main/data-science-blog/data-science-blog/cv/data_augmentation.ipynb"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Launch on Colab"
->
-  
-
-<span class="headerbtn__icon-container">
-  
-    <img src="../../_static/images/logo_colab.png">
-  </span>
-<span class="headerbtn__text-container">Colab</span>
-</a>
-
-      </li>
-      
-    </ul>
-  </div>
-</div>
-
 <button onclick="toggleFullScreen()"
   class="headerbtn"
   data-toggle="tooltip"
@@ -455,7 +405,7 @@ title="Source repository"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../../_sources/data-science-blog/cv/data_augmentation.ipynb"
+        <a href="../../_sources/data-science-blog/cv/data_augmentation.md"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -466,7 +416,7 @@ title="Download source file"
 <span class="headerbtn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="headerbtn__text-container">.ipynb</span>
+<span class="headerbtn__text-container">.md</span>
 </a>
 
       </li>
@@ -557,12 +507,17 @@ title="Print to PDF"
 <h1>Computer Vision Data Augmentation<a class="headerlink" href="#computer-vision-data-augmentation" title="Permalink to this headline">#</a></h1>
 <section id="albumentations-fast-computer-vision-augmentations">
 <h2>Albumentations: Fast computer vision augmentations<a class="headerlink" href="#albumentations-fast-computer-vision-augmentations" title="Permalink to this headline">#</a></h2>
-<p>If you need lightning-fast image augmentations, stick to the albumentations library. It easily outperforms AugLy, imgaug and torchvision by a lot!</p>
-<p><code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">albumentations</span></code></p>
+<p>If you need lightning-fast image augmentations, stick to the
+albumentations library. It easily outperforms AugLy, imgaug and
+torchvision by a lot!</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>pip install albumentations
+</pre></div>
+</div>
 <p>🌟 GitHub: <a class="reference external" href="https://github.com/albumentations-team/albumentations">https://github.com/albumentations-team/albumentations</a></p>
-<p>📖 Paper: <a class="reference external" href="https://openaccess.thecvf.com/content/CVPR2022W/ArtOfRobust/papers/Papakipos_AugLy_Data_Augmentations_for_Adversarial_Robustness_CVPRW_2022_paper.pdf">Link</a></p>
-<p>#datascience #machinelearning #computervision #artificialintelligence</p>
-<iframe width="740" height="740" title="Code snippet - albumentations" src="https://snappify.io/embed/0eb6d508-9fe7-4336-aa6f-8b80d403ccb1" allow="clipboard-write" style="border-radius:10px;background:linear-gradient(337deg, #654ea3, #da98b4)" frameborder="0"></iframe></section>
+<p>📖 Paper:
+<a class="reference external" href="https://openaccess.thecvf.com/content/CVPR2022W/ArtOfRobust/papers/Papakipos_AugLy_Data_Augmentations_for_Adversarial_Robustness_CVPRW_2022_paper.pdf">Link</a></p>
+<div style="overflow:hidden;margin-left:auto;margin-right:auto;border-radius:10px;width:100%;max-width:740px;position:relative"><div style="width:100%;padding-bottom:100%"></div><iframe width="740" height="740" title="Code snippet - albumentations" src="https://snappify.io/embed/0eb6d508-9fe7-4336-aa6f-8b80d403ccb1?responsive" allow="clipboard-write" style="background:linear-gradient(337deg, #654ea3, #da98b4);position:absolute;left:0;top:0;width:100%" frameborder="0"></iframe></div>
+</section>
 </section>
 
     <script type="text/x-thebe-config">

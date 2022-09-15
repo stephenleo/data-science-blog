@@ -1,102 +1,168 @@
+
 # Career Advice
 
 ## Coding manager
+
 I still code ~30% of my time despite managing a team!
 
-A while back, [Shilpa](https://www.linkedin.com/in/ACoAABYyb4EBQTQdHJn1ueKgzEaD6P3ZYm7j_PQ) and I gave a talk to some Data Science students at General Assembly. One of the pieces of advice we gave students about what to expect from a career in Data Science is this:
+A while back,
+[Shilpa](https://www.linkedin.com/in/ACoAABYyb4EBQTQdHJn1ueKgzEaD6P3ZYm7j_PQ)
+and I gave a talk to some Data Science students at General Assembly. One
+of the pieces of advice we gave students about what to expect from a
+career in Data Science is this:
 
-- The single most significant thing I would like aspiring Data Scientists to come to terms with is that technology is evolving at a breakneck pace! Embarking on this data science or analytics career is a journey of continuous learning and not a destination.
+-   The single most significant thing I would like aspiring Data
+    Scientists to come to terms with is that technology is evolving at a
+    breakneck pace! Embarking on this data science or analytics career
+    is a journey of continuous learning and not a destination.
 
-- Taking my career as an example, I still code ~30% of my time despite managing a team at Edelman. I also learn new algorithms and techniques in my own free time and blog about them. I love learning new things and the fact that there is so much knowledge and technology out there to learn makes me both excited and humble.
+-   Taking my career as an example, I still code ~30% of my time despite
+    managing a team at Edelman. I also learn new algorithms and
+    techniques in my own free time and blog about them. I love learning
+    new things and the fact that there is so much knowledge and
+    technology out there to learn makes me both excited and humble.
 
-- I hope that the students also enjoy learning new things and continue to keep learning the latest technology throughout their careers.
+-   I hope that the students also enjoy learning new things and continue
+    to keep learning the latest technology throughout their careers.
 
-I am sharing this here for the wider community looking to break into this field. Having the right expectations will help prevent remorse when you eventually break into the field. All the best!
+I am sharing this here for the wider community looking to break into
+this field. Having the right expectations will help prevent remorse when
+you eventually break into the field. All the best!
 
-#datascience #dataanalytics #technology #careeradvice
+\#datascience \#dataanalytics \#technology \#careeradvice
 
 ## A Typical Week in the life of a Data Scientist
 
 ### Work:
-1. Review your JIRA tickets to decide what to work on this week. Curse at the awful JIRA UI.
-1. Read research papers on [Semantic Scholar](https://www.semanticscholar.org/) or [Papers with Code](https://paperswithcode.com/). Feel smart when you realize you now read greek characters as fast as your native language.
-1. Reading documentation of various frameworks. Swearing at how lousy their documentation is.
-1. Coding. Realizing data cleanup will take about 80% of the project's timeline. Complain about how messy the data is.
-1. Debugging. Frantically searching [Stackoverflow](https://stackoverflow.com/) and hoping somebody else has resolved the same issue.
-1. Run experiments. Complain about how slow training is even on the latest NVIDIA GPU.
-1. Prepare fancy PowerPoints. Spend another 10% of the project's timeline preparing PowerPoint slides so that the non-ML business teams can understand what you're doing.
-1. Refactor code and submit a pull request hoping over the hope that all tests pass and no one thinks your code is dumb.
+
+1.  Review your JIRA tickets to decide what to work on this week. Curse
+    at the awful JIRA UI.
+2.  Read research papers on [Semantic
+    Scholar](https://www.semanticscholar.org/) or [Papers with
+    Code](https://paperswithcode.com/). Feel smart when you realize you
+    now read greek characters as fast as your native language.
+3.  Reading documentation of various frameworks. Swearing at how lousy
+    their documentation is.
+4.  Coding. Realizing data cleanup will take about 80% of the project’s
+    timeline. Complain about how messy the data is.
+5.  Debugging. Frantically searching
+    [Stackoverflow](https://stackoverflow.com/) and hoping somebody else
+    has resolved the same issue.
+6.  Run experiments. Complain about how slow training is even on the
+    latest NVIDIA GPU.
+7.  Prepare fancy PowerPoints. Spend another 10% of the project’s
+    timeline preparing PowerPoint slides so that the non-ML business
+    teams can understand what you’re doing.
+8.  Refactor code and submit a pull request hoping over the hope that
+    all tests pass and no one thinks your code is dumb.
 
 ### Meetings:
-1. 1:1s with boss/reports
-1. Daily/Weekly stand-up meetings
-1. Project update meetings with product teams
-1. Code review meetings
-1. Client meetings
-1. Random meetings from some random person in the business asking for some random data extraction. They always assume it's a simple task, while in reality, you have to join 20 different tables with nasty nested queries.
 
-#datascience #dataanalytics #career
+1.  1:1s with boss/reports
+2.  Daily/Weekly stand-up meetings
+3.  Project update meetings with product teams
+4.  Code review meetings
+5.  Client meetings
+6.  Random meetings from some random person in the business asking for
+    some random data extraction. They always assume it’s a simple task,
+    while in reality, you have to join 20 different tables with nasty
+    nested queries.
+
+\#datascience \#dataanalytics \#career
 
 ## Data Curation
-Data Scientists spend 80% (or more!) of their time collecting and cleaning up data in the real world. Preparing a clean, representative dataset is often more important than what algorithm you finally use to solve your problem.
 
-Many people who join the industry get disappointed when they cannot work on the latest algorithms, but I'd like aspiring Data Scientists to accept that this is normal. A lot of value is unlocked not in using fancy algorithms but in structuring the data well enough to be used.
+Data Scientists spend 80% (or more!) of their time collecting and
+cleaning up data in the real world. Preparing a clean, representative
+dataset is often more important than what algorithm you finally use to
+solve your problem.
 
-So do not get disappointed if you're spending a lot of your time in data cleaning. On the contrary, enjoy the process of wrangling data as every problem is a unique and challenging puzzle to be solved.
+Many people who join the industry get disappointed when they cannot work
+on the latest algorithms, but I’d like aspiring Data Scientists to
+accept that this is normal. A lot of value is unlocked not in using
+fancy algorithms but in structuring the data well enough to be used.
 
+So do not get disappointed if you’re spending a lot of your time in data
+cleaning. On the contrary, enjoy the process of wrangling data as every
+problem is a unique and challenging puzzle to be solved.
 
 ## Technology that saved my life as a data scientist
-💯 As a data scientist, 3 non-data sciency technologies saved my 🍑  countless times:
 
-1️⃣  Bash Shell Scripting
+💯 As a data scientist, 3 non-data sciency technologies saved my 🍑 
+countless times:
 
-2️⃣  Tmux
+-   1️⃣ Bash Shell Scripting
+-   2️⃣ Tmux
+-   3️⃣ Docker
 
-3️⃣  Docker
-
-👉  I highly recommend my team and students learn the basics. You can go a long way with just Google searches and trial-and-error.
-
-#datascience #lifesavers
-
+👉 I highly recommend my team and students learn the basics. You can go
+a long way with just Google searches and trial-and-error.
 
 ## GitHub Copilot
-GitHub Copilot is changing the landscape of how candidates prepare to tackle code interviews! Ethics aside, it's a huge learning opportunity in the absence of direct feedback from the hiring manager or a trusted mentor.
 
-If you're a job seeker struggling to crack the coding interview, I highly recommend the below steps.
+GitHub Copilot is changing the landscape of how candidates prepare to
+tackle code interviews! Ethics aside, it’s a huge learning opportunity
+in the absence of direct feedback from the hiring manager or a trusted
+mentor.
 
-- Sign up for GitHub Copilot. It's free (for now)
-- Practice some problems you've struggled with in the past by first writing your own solution to it and then using Copilot to generate a solution independently.
-- Rigorously analyze the code generated by Copilot and why / if it solves your problem. Most importantly, see what's different from the approach you took. You might discover a more elegant logic or some corner cases that you missed!
-- Press Ctrl + Enter to view other suggestions. Analyze them as well.
-- Over time, you'll learn a lot, so repeat the process on each problem you struggled with until you see that your solutions are comparable to or better than what Copilot suggests!
+If you’re a job seeker struggling to crack the coding interview, I
+highly recommend the below steps.
 
-Et voilà! You're now a much better programmer than when you started.
+-   Sign up for GitHub Copilot. It’s free (for now)
+-   Practice some problems you’ve struggled with in the past by first
+    writing your own solution to it and then using Copilot to generate a
+    solution independently.
+-   Rigorously analyze the code generated by Copilot and why / if it
+    solves your problem. Most importantly, see what’s different from the
+    approach you took. You might discover a more elegant logic or some
+    corner cases that you missed!
+-   Press Ctrl + Enter to view other suggestions. Analyze them as well.
+-   Over time, you’ll learn a lot, so repeat the process on each problem
+    you struggled with until you see that your solutions are comparable
+    to or better than what Copilot suggests!
 
-#github #copilot #learning #coding #interview
+Et voilà! You’re now a much better programmer than when you started.
 
 ## Headfake learning
+
 Have you heard about Head-Fake learning?
 
-Two months back, I wrote a popular blog post titled [“Make Extra Money on the Side With Data Science!”](https://pub.towardsai.net/make-extra-money-on-the-side-with-data-science-984a623c53f5?sk=31e1a7794b073841e9ed66eeb1cc8867) which was supposedly about how to earn a passive income from data science projects. 
+Two months back, I wrote a popular blog post titled [“Make Extra Money
+on the Side With Data
+Science!”](https://pub.towardsai.net/make-extra-money-on-the-side-with-data-science-984a623c53f5?sk=31e1a7794b073841e9ed66eeb1cc8867)
+which was supposedly about how to earn a passive income from data
+science projects.
 
-In reality, my true intention in writing that article was NOT related to making money but instead how to:
+In reality, my true intention in writing that article was NOT related to
+making money but instead how to:
 
-1. Wrap a trained ML model into a FastAPI endpoint using Docker
+1.  Wrap a trained ML model into a FastAPI endpoint using Docker
+2.  Deploy it using a serverless cloud run in Google Cloud
 
-2. Deploy it using a serverless cloud run in Google Cloud
-
-- Compared to the rest of the topics in Data Science, these may seem dry, but they’re crucial to the success of a real-world Data Science team. Hence, the tangential but evergreen topic of making money on the side! I got the inspiration while brainstorming how to teach these topics to my previous part-time data science cohort at General Assembly.
-- In head-fake learning, you think you’re learning one thing when in reality, you’re learning something else that’s probably more valuable. The late Randy Pausch popularised head-fake learning in his [“Last Lecture”](https://www.youtube.com/watch?v=ji5_MqicxSo).
-- For example, when parents encourage kids to play sports, it’s not that they want their kids to become star athletes, but rather to develop skills like teamwork, sportsmanship, and perseverance in a fun way.
-- The next time you need to communicate something that might be dry and tedious, see if you can use a fun head-fake!
-
-#datascience #learning
+-   Compared to the rest of the topics in Data Science, these may seem
+    dry, but they’re crucial to the success of a real-world Data Science
+    team. Hence, the tangential but evergreen topic of making money on
+    the side! I got the inspiration while brainstorming how to teach
+    these topics to my previous part-time data science cohort at General
+    Assembly.
+-   In head-fake learning, you think you’re learning one thing when in
+    reality, you’re learning something else that’s probably more
+    valuable. The late Randy Pausch popularised head-fake learning in
+    his [“Last Lecture”](https://www.youtube.com/watch?v=ji5_MqicxSo).
+-   For example, when parents encourage kids to play sports, it’s not
+    that they want their kids to become star athletes, but rather to
+    develop skills like teamwork, sportsmanship, and perseverance in a
+    fun way.
+-   The next time you need to communicate something that might be dry
+    and tedious, see if you can use a fun head-fake!
 
 ## Linkedin Early Apply
-Did you know that if you pass the LinkedIn assessments for various skills like Python, Machine Learning, etc, you get to apply early for some jobs?
 
-Not sure how much it helps, but something to boost your chances of landing an interview.
+Did you know that if you pass the LinkedIn assessments for various
+skills like Python, Machine Learning, etc, you get to apply early for
+some jobs?
 
-#datascience #machinelearning #linkedin #jobs #interview
+Not sure how much it helps, but something to boost your chances of
+landing an interview.
 
 ![](images/career_advice/LI_early_apply.jpg)

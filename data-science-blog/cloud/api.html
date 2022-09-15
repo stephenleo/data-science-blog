@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Blogging &#8212; Data Science Blog</title>
+    <title>Application Programming Interface (API) &#8212; Data Science Blog</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -54,6 +54,8 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="../../_static/logo.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="AWS Sagemaker" href="sagemaker.html" />
+    <link rel="prev" title="File Storage (S3, GCS, etc)" href="file_storage.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -118,7 +120,7 @@ const thebe_selector_output = ".output, .cell_output"
   Minibatches
  </span>
 </p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../python/python.html">
    🐍 Python Programming
@@ -131,7 +133,9 @@ const thebe_selector_output = ".output, .cell_output"
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../python/pandas.html">
-     Pandas
+     <strong>
+      Pandas
+     </strong>
     </a>
    </li>
   </ul>
@@ -242,41 +246,36 @@ const thebe_selector_output = ".output, .cell_output"
      Stock Technical Analysis
     </a>
    </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../time_series/forecasting.html">
-     Forecasting
-    </a>
-   </li>
   </ul>
  </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../cloud/cloud.html">
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="cloud.html">
    ☁️ Cloud Computing
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
   <label for="toctree-checkbox-6">
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul>
+  <ul class="current">
    <li class="toctree-l2">
-    <a class="reference internal" href="../cloud/apis.html">
+    <a class="reference internal" href="compute.html">
+     Compute
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="file_storage.html">
+     File Storage (S3, GCS, etc)
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
      Application Programming Interface (API)
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../cloud/file_storage.html">
-     File Storage (S3, GCS, etc)
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../cloud/sagemaker.html">
+    <a class="reference internal" href="sagemaker.html">
      AWS Sagemaker
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../cloud/gpu.html">
-     GPU
     </a>
    </li>
   </ul>
@@ -299,7 +298,7 @@ const thebe_selector_output = ".output, .cell_output"
   </ul>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="career.html">
+  <a class="reference internal" href="../career/career.html">
    👔 Data Science Career
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
@@ -309,13 +308,13 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="portfolio.html">
-     Portfolio
+    <a class="reference internal" href="../career/career_advice.html">
+     Career Advice
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="career_advice.html">
-     Career Advice
+    <a class="reference internal" href="../career/portfolio.html">
+     Portfolio
     </a>
    </li>
   </ul>
@@ -406,7 +405,7 @@ title="Source repository"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../../_sources/data-science-blog/career/blogging.md"
+        <a href="../../_sources/data-science-blog/cloud/api.md"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -466,8 +465,8 @@ title="Print to PDF"
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#jupyter-book">
-   Jupyter Book
+  <a class="reference internal nav-link" href="#json-lines">
+   JSON Lines
   </a>
  </li>
 </ul>
@@ -479,7 +478,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Blogging</h1>
+                <h1>Application Programming Interface (API)</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -490,8 +489,8 @@ title="Print to PDF"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#jupyter-book">
-   Jupyter Book
+  <a class="reference internal nav-link" href="#json-lines">
+   JSON Lines
   </a>
  </li>
 </ul>
@@ -504,21 +503,33 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="blogging">
-<h1>Blogging<a class="headerlink" href="#blogging" title="Permalink to this headline">#</a></h1>
-<section id="jupyter-book">
-<h2>Jupyter Book<a class="headerlink" href="#jupyter-book" title="Permalink to this headline">#</a></h2>
-<p>Create beautiful, publication-quality online (and pdf) books using Jupyter Notebooks!</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="application-programming-interface-api">
+<h1>Application Programming Interface (API)<a class="headerlink" href="#application-programming-interface-api" title="Permalink to this headline">#</a></h1>
+<section id="json-lines">
+<h2>JSON Lines<a class="headerlink" href="#json-lines" title="Permalink to this headline">#</a></h2>
+<p>The JSON format is one of the most popular ways of transmitting
+information over any network. Why is this important for a Data
+Scientist?</p>
 <ul class="simple">
-<li><p>Include markdown text, code, and code outputs.</p></li>
-<li><p>Directly open each page in Binder or Google Colab to follow along.</p></li>
-<li><p>Publish the book for free on GitHub pages.</p></li>
-<li><p>Perfect for publishing your own technical blog or portfolio!</p></li>
+<li><p>When you deploy a model as an endpoint, you will probably send and
+receive data from the deployed model in JSON format.</p></li>
 </ul>
-<p>🌟 Github: <a class="reference external" href="https://github.com/executablebooks/jupyter-book">https://github.com/executablebooks/jupyter-book</a></p>
-<p>📖 Documentation: <a class="reference external" href="https://jupyterbook.org/en/stable/intro.html">https://jupyterbook.org/en/stable/intro.html</a></p>
-<p>📊 Example Jupyterbook - Data Visualization Curriculum: <a class="reference external" href="https://uwdata.github.io/visualization-curriculum/intro.html">https://uwdata.github.io/visualization-curriculum/intro.html</a></p>
-<p>#datascience #datavisualization #learning #publishing</p>
+<p>There are many ways to construct a JSON string. The best way, in my
+opinion, is to use the JSON lines format.</p>
+<ul class="simple">
+<li><p>Directly convert to and from Pandas dataframes!</p></li>
+<li><p>One line is one row of data. No ambiguity about how to split rows!</p></li>
+<li><p>Very readable where each key is the column name, and each value is
+the value of the row in that column. No ambiguity about which value
+belongs to which feature!</p></li>
+<li><p>Easy to parallelize (e.g., using Sagemaker Batch Transform) since we
+can send each line to a different machine for inference.</p></li>
+</ul>
+<p>While deploying ML models (e.g., in Sagemaker), you need to handle
+converting to and from the JSON object. So keeping your deployment
+consistent with JSON lines format will make your life much easier and
+unambiguous.</p>
+<div style="overflow:hidden;margin-left:auto;margin-right:auto;border-radius:10px;width:100%;max-width:740px;position:relative"><div style="width:100%;padding-bottom:77.70270270270271%"></div><iframe width="740" height="575" title="Code snippet - json_lines" src="https://snappify.io/embed/6f162780-cc5c-4ea5-bad8-9a183b12a2d6?responsive" allow="clipboard-write" style="background:linear-gradient(354deg,  #FF75B5, #FFB86C);position:absolute;left:0;top:0;width:100%" frameborder="0"></iframe></div>
 </section>
 </section>
 
@@ -535,7 +546,7 @@ title="Print to PDF"
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./data-science-blog/career"
+            path: "./data-science-blog/cloud"
         },
         predefinedOutput: true
     }
@@ -549,6 +560,20 @@ title="Print to PDF"
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="file_storage.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">File Storage (S3, GCS, etc)</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="sagemaker.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">AWS Sagemaker</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
 </div>
             </footer>
         </div>

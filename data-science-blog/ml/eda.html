@@ -133,7 +133,9 @@ const thebe_selector_output = ".output, .cell_output"
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../python/pandas.html">
-     Pandas
+     <strong>
+      Pandas
+     </strong>
     </a>
    </li>
   </ul>
@@ -244,11 +246,6 @@ const thebe_selector_output = ".output, .cell_output"
      Stock Technical Analysis
     </a>
    </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../time_series/forecasting.html">
-     Forecasting
-    </a>
-   </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
@@ -262,8 +259,8 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../cloud/apis.html">
-     Application Programming Interface (API)
+    <a class="reference internal" href="../cloud/compute.html">
+     Compute
     </a>
    </li>
    <li class="toctree-l2">
@@ -272,13 +269,13 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../cloud/sagemaker.html">
-     AWS Sagemaker
+    <a class="reference internal" href="../cloud/api.html">
+     Application Programming Interface (API)
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../cloud/gpu.html">
-     GPU
+    <a class="reference internal" href="../cloud/sagemaker.html">
+     AWS Sagemaker
     </a>
    </li>
   </ul>
@@ -311,13 +308,13 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../career/portfolio.html">
-     Portfolio
+    <a class="reference internal" href="../career/career_advice.html">
+     Career Advice
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../career/career_advice.html">
-     Career Advice
+    <a class="reference internal" href="../career/portfolio.html">
+     Portfolio
     </a>
    </li>
   </ul>
@@ -510,21 +507,37 @@ title="Print to PDF"
 <h1>Exploratory Data Analysis<a class="headerlink" href="#exploratory-data-analysis" title="Permalink to this headline">#</a></h1>
 <section id="pandas-profiling">
 <h2>Pandas Profiling<a class="headerlink" href="#pandas-profiling" title="Permalink to this headline">#</a></h2>
-<p>Automate your exploratory data analysis (EDA) analysis with one line of code!</p>
+<p>Automate your exploratory data analysis (EDA) analysis with one line of
+code!</p>
 <ul class="simple">
-<li><p>When I start working on any new dataset, I subconsciously follow the same set of EDA steps to understand the data better.</p></li>
-<li><p>The pandas’ <code class="docutils literal notranslate"><span class="pre">df.describe()</span></code> function is too basic for serious EDA work, so I manually create many plots and summary statistics. Most of the time, I need to Google for some specific syntax or solve some coding bug. All this makes the whole EDA process quite tedious at times.</p></li>
+<li><p>When I start working on any new dataset, I subconsciously follow the
+same set of EDA steps to understand the data better.</p></li>
+<li><p>The pandas’ <code class="docutils literal notranslate"><span class="pre">#!python</span> <span class="pre">df.describe()</span></code> function is too basic for
+serious EDA work, so I manually create many plots and summary
+statistics. Most of the time, I need to Google for some specific
+syntax or solve some coding bug. All this makes the whole EDA
+process quite tedious at times.</p></li>
 </ul>
 <p>Enter Pandas profiling!</p>
 <ul class="simple">
-<li><p>Pandas profiling is an open-source Python library that automates many of those “best-known methods” in EDA to prepare a detailed interactive report with just 1 line of code!</p></li>
-<li><p>You can then click through the various tabs and analyze the results without manually creating everything yourself. What a time saver!</p></li>
-<li><p>Specifically, Pandas profiling automatically calculates column statistics, plots histograms, correlation coefficients, etc.</p></li>
+<li><p>Pandas profiling is an open-source Python library that automates
+many of those “best-known methods” in EDA to prepare a detailed
+interactive report with just 1 line of code!</p></li>
+<li><p>You can then click through the various tabs and analyze the results
+without manually creating everything yourself. What a time saver!</p></li>
+<li><p>Specifically, Pandas profiling automatically calculates column
+statistics, plots histograms, correlation coefficients, etc.</p></li>
 </ul>
+<!-- -->
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>pip install pandas-profiling
+</pre></div>
+</div>
 <p>🌟 Github: <a class="reference external" href="https://github.com/ydataai/pandas-profiling">https://github.com/ydataai/pandas-profiling</a></p>
-<p>▶️ Play with it on Binder: <a class="reference external" href="https://mybinder.org/v2/gh/ydataai/pandas-profiling/master?filepath=examples%2Ftitanic%2Ftitanic.ipynb">Link</a></p>
-<p>#datascience #datavisualization #dataanalysis #pandas #python</p>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/aKqkiwhnvCY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></section>
+<p>▶️ Play with it on
+<a class="reference external" href="https://mybinder.org/v2/gh/ydataai/pandas-profiling/master?filepath=examples%2Ftitanic%2Ftitanic.ipynb">Binder</a></p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/aKqkiwhnvCY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+</iframe>
+</section>
 </section>
 
     <script type="text/x-thebe-config">

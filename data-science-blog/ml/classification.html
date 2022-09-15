@@ -133,7 +133,9 @@ const thebe_selector_output = ".output, .cell_output"
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../python/pandas.html">
-     Pandas
+     <strong>
+      Pandas
+     </strong>
     </a>
    </li>
   </ul>
@@ -244,11 +246,6 @@ const thebe_selector_output = ".output, .cell_output"
      Stock Technical Analysis
     </a>
    </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../time_series/forecasting.html">
-     Forecasting
-    </a>
-   </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
@@ -262,8 +259,8 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../cloud/apis.html">
-     Application Programming Interface (API)
+    <a class="reference internal" href="../cloud/compute.html">
+     Compute
     </a>
    </li>
    <li class="toctree-l2">
@@ -272,13 +269,13 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../cloud/sagemaker.html">
-     AWS Sagemaker
+    <a class="reference internal" href="../cloud/api.html">
+     Application Programming Interface (API)
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../cloud/gpu.html">
-     GPU
+    <a class="reference internal" href="../cloud/sagemaker.html">
+     AWS Sagemaker
     </a>
    </li>
   </ul>
@@ -311,13 +308,13 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../career/portfolio.html">
-     Portfolio
+    <a class="reference internal" href="../career/career_advice.html">
+     Career Advice
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../career/career_advice.html">
-     Career Advice
+    <a class="reference internal" href="../career/portfolio.html">
+     Portfolio
     </a>
    </li>
   </ul>
@@ -373,53 +370,6 @@ title="Toggle navigation"
         
     </div>
     <div class="header-article__right">
-<div class="menu-dropdown menu-dropdown-launch-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Launch interactive content">
-      <i class="fas fa-rocket"></i>
-  </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="https://mybinder.org/v2/gh/stephenleo/data-science-blog/main?urlpath=tree/data-science-blog/data-science-blog/ml/classification.ipynb"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Launch on Binder"
->
-  
-
-<span class="headerbtn__icon-container">
-  
-    <img src="../../_static/images/logo_binder.svg">
-  </span>
-<span class="headerbtn__text-container">Binder</span>
-</a>
-
-      </li>
-      
-      <li>
-        <a href="https://colab.research.google.com/github/stephenleo/data-science-blog/blob/main/data-science-blog/data-science-blog/ml/classification.ipynb"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Launch on Colab"
->
-  
-
-<span class="headerbtn__icon-container">
-  
-    <img src="../../_static/images/logo_colab.png">
-  </span>
-<span class="headerbtn__text-container">Colab</span>
-</a>
-
-      </li>
-      
-    </ul>
-  </div>
-</div>
-
 <button onclick="toggleFullScreen()"
   class="headerbtn"
   data-toggle="tooltip"
@@ -455,7 +405,7 @@ title="Source repository"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../../_sources/data-science-blog/ml/classification.ipynb"
+        <a href="../../_sources/data-science-blog/ml/classification.md"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -466,7 +416,7 @@ title="Download source file"
 <span class="headerbtn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="headerbtn__text-container">.ipynb</span>
+<span class="headerbtn__text-container">.md</span>
 </a>
 
       </li>
@@ -567,10 +517,16 @@ title="Print to PDF"
 <h1>Classification<a class="headerlink" href="#classification" title="Permalink to this headline">#</a></h1>
 <section id="multi-label-classification-stratified-split">
 <h2>Multi-label Classification Stratified Split<a class="headerlink" href="#multi-label-classification-stratified-split" title="Permalink to this headline">#</a></h2>
-<p>Iterative Stratification: Easily stratify the train test split for multi-label classification problems</p>
+<p>Iterative Stratification: Easily stratify the train test split for
+multi-label classification problems</p>
 <ul class="simple">
-<li><p>In machine learning classification problems, when your input data has imbalanced classes, it’s necessary to stratify the train-test split so that we maintain the proportion of the minority class in both the train and test splits.</p></li>
-<li><p>Unfortunately, sklearn’s train_test_split only allows stratified splits for single-label classification and does not support multiple labels.</p></li>
+<li><p>In machine learning classification problems, when your input data
+has imbalanced classes, it’s necessary to stratify the train-test
+split so that we maintain the proportion of the minority class in
+both the train and test splits.</p></li>
+<li><p>Unfortunately, sklearn’s train_test_split only allows stratified
+splits for single-label classification and does not support multiple
+labels.</p></li>
 </ul>
 <p>Enter iterative-stratification:</p>
 <ul class="simple">
@@ -578,17 +534,23 @@ title="Print to PDF"
 <li><p>With K-Fold cross-validation!</p></li>
 <li><p>Compatible with sklearn</p></li>
 </ul>
-<p><code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">iterative-stratification</span></code></p>
+<!-- -->
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>pip install iterative-stratification
+</pre></div>
+</div>
 <p>🌟 Github: <a class="reference external" href="https://github.com/trent-b/iterative-stratification">https://github.com/trent-b/iterative-stratification</a></p>
-<p>#datascience #dataanalytics #machinelearning #python</p>
-<iframe width="740" height="483" title="Code snippet - iterative-stratification" src="https://snappify.io/embed/a6dde5ec-806e-40c7-9125-d540ff350738" allow="clipboard-write" style="border-radius:10px;background:linear-gradient(337deg, #654ea3, #da98b4)" frameborder="0"></iframe></section>
+<div style="overflow:hidden;margin-left:auto;margin-right:auto;border-radius:10px;width:100%;max-width:740px;position:relative"><div style="width:100%;padding-bottom:65.27027027027027%"></div><iframe width="740" height="483" title="Code snippet - iterative-stratification" src="https://snappify.io/embed/a6dde5ec-806e-40c7-9125-d540ff350738?responsive" allow="clipboard-write" style="background:linear-gradient(337deg, #654ea3, #da98b4);position:absolute;left:0;top:0;width:100%" frameborder="0"></iframe></div>
+</section>
 <section id="efficient-metrics-calculation">
 <h2>Efficient Metrics Calculation<a class="headerlink" href="#efficient-metrics-calculation" title="Permalink to this headline">#</a></h2>
-<p>Typically when you want to calculate multiple metrics for a machine learning model, you’d import and run them one by one.</p>
-<p>Instead, you can refactor your code to calculate multiple metrics with a single get_scorer method, as shown in the image.</p>
-<p>You could move metrics_list to a config.yml so that we can change the metrics calculated without changing any code!</p>
-<p>#datascience #dataanalytics #dataengineering #machinelearning #python</p>
-<iframe width="740" height="575" title="Code snippet - get_scorer" src="https://snappify.io/embed/f377977b-6c54-4ab1-b7a1-94daa7766ca5" allow="clipboard-write" style="border-radius:10px;background:linear-gradient(337deg, #654ea3, #da98b4)" frameborder="0"></iframe></section>
+<p>Typically when you want to calculate multiple metrics for a machine
+learning model, you’d import and run them one by one.</p>
+<p>Instead, you can refactor your code to calculate multiple metrics with a
+single <code class="docutils literal notranslate"><span class="pre">#!python</span> <span class="pre">get_scorer()</span></code> method, as shown in the image.</p>
+<p>You could move metrics_list to a config.yml so that we can change the
+metrics calculated without changing any code!</p>
+<div style="overflow:hidden;margin-left:auto;margin-right:auto;border-radius:10px;width:100%;max-width:740px;position:relative"><div style="width:100%;padding-bottom:77.70270270270271%"></div><iframe width="740" height="575" title="Code snippet - get_scorer" src="https://snappify.io/embed/f377977b-6c54-4ab1-b7a1-94daa7766ca5?responsive" allow="clipboard-write" style="background:linear-gradient(337deg, #654ea3, #da98b4);position:absolute;left:0;top:0;width:100%" frameborder="0"></iframe></div>
+</section>
 </section>
 
     <script type="text/x-thebe-config">

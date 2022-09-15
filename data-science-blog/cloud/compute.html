@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>GPU &#8212; Data Science Blog</title>
+    <title>Compute &#8212; Data Science Blog</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -54,8 +54,8 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="../../_static/logo.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="🔩 Good Coding Practices" href="../good_coding/good_coding.html" />
-    <link rel="prev" title="AWS Sagemaker" href="sagemaker.html" />
+    <link rel="next" title="File Storage (S3, GCS, etc)" href="file_storage.html" />
+    <link rel="prev" title="☁️ Cloud Computing" href="cloud.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -133,7 +133,9 @@ const thebe_selector_output = ".output, .cell_output"
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../python/pandas.html">
-     Pandas
+     <strong>
+      Pandas
+     </strong>
     </a>
    </li>
   </ul>
@@ -244,11 +246,6 @@ const thebe_selector_output = ".output, .cell_output"
      Stock Technical Analysis
     </a>
    </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../time_series/forecasting.html">
-     Forecasting
-    </a>
-   </li>
   </ul>
  </li>
  <li class="toctree-l1 current active has-children">
@@ -261,9 +258,9 @@ const thebe_selector_output = ".output, .cell_output"
    </i>
   </label>
   <ul class="current">
-   <li class="toctree-l2">
-    <a class="reference internal" href="apis.html">
-     Application Programming Interface (API)
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Compute
     </a>
    </li>
    <li class="toctree-l2">
@@ -272,13 +269,13 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="sagemaker.html">
-     AWS Sagemaker
+    <a class="reference internal" href="api.html">
+     Application Programming Interface (API)
     </a>
    </li>
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
-     GPU
+   <li class="toctree-l2">
+    <a class="reference internal" href="sagemaker.html">
+     AWS Sagemaker
     </a>
    </li>
   </ul>
@@ -311,13 +308,13 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../career/portfolio.html">
-     Portfolio
+    <a class="reference internal" href="../career/career_advice.html">
+     Career Advice
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../career/career_advice.html">
-     Career Advice
+    <a class="reference internal" href="../career/portfolio.html">
+     Portfolio
     </a>
    </li>
   </ul>
@@ -408,7 +405,7 @@ title="Source repository"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../../_sources/data-science-blog/cloud/gpu.md"
+        <a href="../../_sources/data-science-blog/cloud/compute.md"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -481,7 +478,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>GPU</h1>
+                <h1>Compute</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -506,27 +503,53 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="gpu">
-<h1>GPU<a class="headerlink" href="#gpu" title="Permalink to this headline">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="compute">
+<h1>Compute<a class="headerlink" href="#compute" title="Permalink to this headline">#</a></h1>
 <section id="cpu-vs-gpu">
 <h2>CPU vs GPU<a class="headerlink" href="#cpu-vs-gpu" title="Permalink to this headline">#</a></h2>
-<p>If you’re new to the world of Data Science, you might’ve heard someone mention using a “GPU.”</p>
-<p>What is a GPU? a Graphics Processing Unit is fundamentally just another component that goes into your computer similar to the hard disk or RAM. They’re really good at specific tasks such as gaming and applications which require high graphics power. However, in recent years, GPUs have become much more valuable due to 2 reasons:</p>
+<p>If you’re new to the world of Data Science, you might’ve heard someone
+mention using a “GPU.”</p>
+<p>What is a GPU? a Graphics Processing Unit is fundamentally just another
+component that goes into your computer similar to the hard disk or RAM.
+They’re really good at specific tasks such as gaming and applications
+which require high graphics power. However, in recent years, GPUs have
+become much more valuable due to 2 reasons:</p>
 <ol class="simple">
-<li><p>Computer scientists discovered that GPUs are perfect for Deep Learning, a class of Machine Learning heavily used in Computer Vision and NLP.</p></li>
-<li><p>Bitcoin and other Cryptocurrency miners discovered that GPUs allow much faster mining!</p></li>
+<li><p>Computer scientists discovered that GPUs are perfect for Deep
+Learning, a class of Machine Learning heavily used in Computer
+Vision and NLP.</p></li>
+<li><p>Bitcoin and other Cryptocurrency miners discovered that GPUs allow
+much faster mining!</p></li>
 </ol>
-<p>Though I would love to have made a million bucks on crypto, I’m but a humble programmer and cannot advise you on crypto mining. I can, however, advise you on running Deep Learning models on a GPU.</p>
-<p>Below is a very simple benchmarking running a popular NLP model called Sentence Transformers on a CPU and a GPU. The same code can run 12X faster on a GPU!</p>
-<p>But note that not all ML libraries benefit from a GPU. In general, if you’re programming using <a class="reference external" href="https://www.tensorflow.org/">Tensorflow</a> or <a class="reference external" href="https://pytorch.org/">Pytorch</a>, there’s a high chance you should see a speedup using GPU. Sorry <a class="reference external" href="https://scikit-learn.org/stable/">scikit-learn</a> fans, as far as I know, it doesn’t support GPU (yet!).</p>
-<p>If you want to use a GPU with algorithms from sklearn, then check out the fantastic <a class="reference external" href="https://github.com/rapidsai/cuml">RAPIDS cuML library</a> instead. It has the GPU versions of many popular algorithms that you’d normally use sklearn for!</p>
-<p>Finally, what if your computer doesn’t have a GPU? New GPUs have been facing an acute shortage for some time now, and frankly, I’m fed up with all the scalpers selling GPUs at insanely marked-up prices!</p>
-<p>Having said that, the best ways to get started with a GPU are entirely free, albeit with some reasonable limitations. Do check them out if you need to use one!</p>
+<p>Though I would love to have made a million bucks on crypto, I’m but a
+humble programmer and cannot advise you on crypto mining. I can,
+however, advise you on running Deep Learning models on a GPU.</p>
+<p>Below is a very simple benchmarking running a popular NLP model called
+Sentence Transformers on a CPU and a GPU. The same code can run 12X
+faster on a GPU!</p>
+<p>But note that not all ML libraries benefit from a GPU. In general, if
+you’re programming using <a class="reference external" href="https://www.tensorflow.org/">Tensorflow</a> or
+<a class="reference external" href="https://pytorch.org/">Pytorch</a>, there’s a high chance you should see a
+speedup using GPU. Sorry
+<a class="reference external" href="https://scikit-learn.org/stable/">scikit-learn</a> fans, as far as I know,
+it doesn’t support GPU (yet!).</p>
+<p>If you want to use a GPU with algorithms from sklearn, then check out
+the fantastic <a class="reference external" href="https://github.com/rapidsai/cuml">RAPIDS cuML library</a>
+instead. It has the GPU versions of many popular algorithms that you’d
+normally use sklearn for!</p>
+<p>Finally, what if your computer doesn’t have a GPU? New GPUs have been
+facing an acute shortage for some time now, and frankly, I’m fed up with
+all the scalpers selling GPUs at insanely marked-up prices!</p>
+<p>Having said that, the best ways to get started with a GPU are entirely
+free, albeit with some reasonable limitations. Do check them out if you
+need to use one!</p>
 <ol class="simple">
-<li><p>Google Colab: <a class="reference external" href="https://colab.research.google.com/notebooks/gpu.ipynb">https://colab.research.google.com/notebooks/gpu.ipynb</a></p></li>
-<li><p>Kaggle: <a class="reference external" href="https://www.kaggle.com/general/97939#1651969">https://www.kaggle.com/general/97939#1651969</a></p></li>
-<li><p>AWS Sagemaker Studio Lab: <a class="reference external" href="https://aws.amazon.com/sagemaker/studio-lab/">https://aws.amazon.com/sagemaker/studio-lab/</a></p></li>
-<li><p>Gradient Notebooks: <a class="reference external" href="https://gradient.run/">https://gradient.run/</a></p></li>
+<li><p><a class="reference external" href="https://colab.research.google.com/notebooks/gpu.ipynb">Google
+Colab</a></p></li>
+<li><p><a class="reference external" href="https://www.kaggle.com/general/97939#1651969">Kaggle Kernel</a></p></li>
+<li><p><a class="reference external" href="https://aws.amazon.com/sagemaker/studio-lab/">AWS Sagemaker Studio
+Lab</a></p></li>
+<li><p><a class="reference external" href="https://gradient.run/">Gradient Notebooks</a></p></li>
 </ol>
 <p><img alt="" src="../../_images/cpu_vs_gpu.png" /></p>
 </section>
@@ -559,17 +582,17 @@ title="Print to PDF"
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="sagemaker.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="cloud.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">AWS Sagemaker</p>
+            <p class="prev-next-title">☁️ Cloud Computing</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="../good_coding/good_coding.html" title="next page">
+    <a class='right-next' id="next-link" href="file_storage.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">🔩 Good Coding Practices</p>
+        <p class="prev-next-title">File Storage (S3, GCS, etc)</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

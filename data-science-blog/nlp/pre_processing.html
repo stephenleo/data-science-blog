@@ -133,7 +133,9 @@ const thebe_selector_output = ".output, .cell_output"
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../python/pandas.html">
-     Pandas
+     <strong>
+      Pandas
+     </strong>
     </a>
    </li>
   </ul>
@@ -244,11 +246,6 @@ const thebe_selector_output = ".output, .cell_output"
      Stock Technical Analysis
     </a>
    </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../time_series/forecasting.html">
-     Forecasting
-    </a>
-   </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
@@ -262,8 +259,8 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../cloud/apis.html">
-     Application Programming Interface (API)
+    <a class="reference internal" href="../cloud/compute.html">
+     Compute
     </a>
    </li>
    <li class="toctree-l2">
@@ -272,13 +269,13 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../cloud/sagemaker.html">
-     AWS Sagemaker
+    <a class="reference internal" href="../cloud/api.html">
+     Application Programming Interface (API)
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../cloud/gpu.html">
-     GPU
+    <a class="reference internal" href="../cloud/sagemaker.html">
+     AWS Sagemaker
     </a>
    </li>
   </ul>
@@ -311,13 +308,13 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../career/portfolio.html">
-     Portfolio
+    <a class="reference internal" href="../career/career_advice.html">
+     Career Advice
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../career/career_advice.html">
-     Career Advice
+    <a class="reference internal" href="../career/portfolio.html">
+     Portfolio
     </a>
    </li>
   </ul>
@@ -373,53 +370,6 @@ title="Toggle navigation"
         
     </div>
     <div class="header-article__right">
-<div class="menu-dropdown menu-dropdown-launch-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Launch interactive content">
-      <i class="fas fa-rocket"></i>
-  </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="https://mybinder.org/v2/gh/stephenleo/data-science-blog/main?urlpath=tree/data-science-blog/data-science-blog/nlp/pre_processing.ipynb"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Launch on Binder"
->
-  
-
-<span class="headerbtn__icon-container">
-  
-    <img src="../../_static/images/logo_binder.svg">
-  </span>
-<span class="headerbtn__text-container">Binder</span>
-</a>
-
-      </li>
-      
-      <li>
-        <a href="https://colab.research.google.com/github/stephenleo/data-science-blog/blob/main/data-science-blog/data-science-blog/nlp/pre_processing.ipynb"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Launch on Colab"
->
-  
-
-<span class="headerbtn__icon-container">
-  
-    <img src="../../_static/images/logo_colab.png">
-  </span>
-<span class="headerbtn__text-container">Colab</span>
-</a>
-
-      </li>
-      
-    </ul>
-  </div>
-</div>
-
 <button onclick="toggleFullScreen()"
   class="headerbtn"
   data-toggle="tooltip"
@@ -455,7 +405,7 @@ title="Source repository"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../../_sources/data-science-blog/nlp/pre_processing.ipynb"
+        <a href="../../_sources/data-science-blog/nlp/pre_processing.md"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -466,7 +416,7 @@ title="Download source file"
 <span class="headerbtn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="headerbtn__text-container">.ipynb</span>
+<span class="headerbtn__text-container">.md</span>
 </a>
 
       </li>
@@ -556,20 +506,32 @@ title="Print to PDF"
   <section class="tex2jax_ignore mathjax_ignore" id="text-pre-processing">
 <h1>Text Pre-Processing<a class="headerlink" href="#text-pre-processing" title="Permalink to this headline">#</a></h1>
 <ul class="simple">
-<li><p>Textual data, especially those scrapped from the internet, can be incredibly messy with tons of inconsistencies</p></li>
-<li><p>Text pre-processing techniques aim to clean up the text data and prepare it for Machine Learning</p></li>
+<li><p>Textual data, especially those scrapped from the internet, can be
+incredibly messy with tons of inconsistencies</p></li>
+<li><p>Text pre-processing techniques aim to clean up the text data and
+prepare it for Machine Learning</p></li>
 </ul>
 <section id="ftfy-fixes-text-for-you">
 <h2>ftfy: fixes text for you<a class="headerlink" href="#ftfy-fixes-text-for-you" title="Permalink to this headline">#</a></h2>
-<p>One of the most frustrating parts about working with tons of text in the real world is identifying and fixing “noise” in the text such as this</p>
+<p>One of the most frustrating parts about working with tons of text in the
+real world is identifying and fixing “noise” in the text such as this</p>
 <p>🙅 Noisy text: <code class="docutils literal notranslate"><span class="pre">&quot;The</span> <span class="pre">Mona</span> <span class="pre">Lisa</span> <span class="pre">doesnÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢t</span> <span class="pre">have</span> <span class="pre">eyebrows.&quot;</span></code></p>
 <p>🙆 Actual text: <code class="docutils literal notranslate"><span class="pre">&quot;The</span> <span class="pre">Mona</span> <span class="pre">Lisa</span> <span class="pre">doesn't</span> <span class="pre">have</span> <span class="pre">eyebrows.&quot;</span></code></p>
-<p>👉 Enter “ftfy”, a nifty little python library by <a class="reference external" href="https://www.linkedin.com/in/elia-lake-13277335/">Elia Lake</a> that fixes Unicode text that’s broken in various ways. Take a look at the image below for some examples!</p>
-<p>✅  Fix multiple layers of mojibake (encoding mix-ups) including “curly quotes”, by detecting patterns of characters that were clearly meant to be UTF-8 but were decoded as something else.</p>
-<p>✅  Decode HTML entities that appear outside of HTML</p>
-<p>✅  Strongly avoids false positives (should never change a correctly-decoded text to something else)</p>
-<p>🚀  Github: <a class="reference external" href="https://github.com/rspeer/python-ftfy">https://github.com/rspeer/python-ftfy</a></p>
-<iframe width="740" height="480" title="Code snippet - ftfy" src="https://snappify.io/embed/d4d6d9bc-9431-49f5-b15c-7fd656eb27b3" allow="clipboard-write" style="border-radius:10px;background:linear-gradient(337deg, #654ea3, #da98b4)" frameborder="0"></iframe></section>
+<p>👉 Enter “ftfy”, a nifty little python library by <a class="reference external" href="https://www.linkedin.com/in/elia-lake-13277335/">Elia
+Lake</a> that fixes
+Unicode text that’s broken in various ways. Take a look at the image
+below for some examples!</p>
+<ul class="contains-task-list simple">
+<li class="task-list-item"><p><input class="task-list-item-checkbox" checked="checked" disabled="disabled" type="checkbox"> Fix multiple layers of mojibake (encoding mix-ups) including
+“curly quotes”, by detecting patterns of characters that were
+clearly meant to be UTF-8 but were decoded as something else.</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" checked="checked" disabled="disabled" type="checkbox"> Decode HTML entities that appear outside of HTML</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" checked="checked" disabled="disabled" type="checkbox"> Strongly avoids false positives (should never change a
+correctly-decoded text to something else)</p></li>
+</ul>
+<p>🌟 Github: <a class="reference external" href="https://github.com/rspeer/python-ftfy">https://github.com/rspeer/python-ftfy</a></p>
+<div style="overflow:hidden;margin-left:auto;margin-right:auto;border-radius:10px;width:100%;max-width:740px;position:relative"><div style="width:100%;padding-bottom:64.86486486486486%"></div><iframe width="740" height="480" title="Code snippet - ftfy" src="https://snappify.io/embed/d4d6d9bc-9431-49f5-b15c-7fd656eb27b3?responsive" allow="clipboard-write" style="background:linear-gradient(337deg, #654ea3, #da98b4);position:absolute;left:0;top:0;width:100%" frameborder="0"></iframe></div>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
